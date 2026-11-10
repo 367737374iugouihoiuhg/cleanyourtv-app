@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clean Your TV，:feature:launcher。繁體中文（TW/HK）資源字串。
+  介面：M2 主畫面、主題選擇器，以及停靠欄面板（S3b）。帶參數的字串使用 ICU MessageFormat 命名參數。
+-->
+<resources>
+
+    <!-- 通用按鈕文字 -->
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_done">完成</string>
+    <string name="action_undo">復原</string>
+
+    <!-- 憑證驗證提示（D17），由「重新傳送我的主畫面」和「使用電視自帶的主畫面」觸發 -->
+    <string name="gate_title">確認是你本人</string>
+    <string name="gate_subtitle">在我們改動 {tv} 上的任何內容之前</string>
+    <string name="gate_negative">取消</string>
+    <string name="gate_failed">我們無法確認是你本人，因此未作任何改動。</string>
+
+    <!-- M2 主畫面 -->
+    <string name="home_title">主畫面</string>
+    <string name="home_row_dock">停靠欄</string>
+    <!-- 停靠欄列的副標題：停靠欄中的應用程式，以及下方還有幾個 -->
+    <string name="home_row_dock_rows">{names}，下方還有 {count, plural, one {# 個應用程式} other {# 個應用程式}}</string>
+    <string name="home_row_look">外觀</string>
+    <string name="home_tcl_remote_keys">在 TCL Google TV 上，遙控器上的設定（齒輪）、Netflix 和 YouTube 按鈕在使用新主畫面時無法運作。要將它們恢復，請選擇「使用電視自帶的主畫面」。</string>
+    <!-- 在 TCL 以外的 Google TV 品牌，其遙控器的設定按鈕可能停止運作 -->
+    <string name="home_google_tv_settings_key">在 Google TV 上，遙控器上的設定（齒輪）按鈕會開啟 Google TV 自帶的設定面板，該面板在許多電視上也包含目前訊號源的畫質與聲音設定。使用新主畫面時，它可能失效。要將它恢復，請選擇「使用電視自帶的主畫面」。</string>
+    <string name="home_row_stock">使用電視自帶的主畫面</string>
+    <string name="home_row_stock_note">恢復電視自帶的主畫面。我們的仍保持安裝，因此你可以再次切換。</string>
+    <string name="home_drift_banner">電視上的主畫面設定在你設定之後已被更改。</string>
+    <string name="home_drift_restore">重新傳送我的主畫面</string>
+    <string name="home_applying">正在更新電視上的主畫面……</string>
+    <string name="home_snackbar_done">完成。</string>
+
+    <!-- 新主畫面未安裝在這台電視上，因此沒有停靠欄或外觀可更改。 -->
+    <string name="home_not_on_tv_lead">{tv} 保留自己的主畫面。停靠欄和外觀屬於新主畫面，而它並未在這台電視上。</string>
+    <string name="home_not_on_tv_refuses">{brand} 只允許使用自帶的主畫面，因此安裝設定沒有新增我們的。清理功能無需它也能運作。</string>
+    <string name="home_not_on_tv_old_android">新主畫面需要 Android 8 或更新版本，因此安裝設定沒有新增它。清理功能無需它也能運作。</string>
+    <string name="home_not_on_tv_unknown_home">我們對這台電視自帶的主畫面了解不足，無法安全地切換，因此安裝設定沒有改動它。</string>
+    <string name="home_not_on_tv_wizard_wifi">這台電視的 Wi-Fi 是由它的設定精靈儲存的。新主畫面需要關閉設定精靈，而這樣會忘記 Wi-Fi；若保持精靈開啟，電視可能會當機。因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_wizard_wifi_unlisted">這台電視的 Wi-Fi 是由它的設定精靈儲存的，而我們對這台電視的了解還不足，無法安全地關閉該精靈。若保持精靈開啟，新主畫面可能導致電視當機，因此安裝設定沒有改動它。</string>
+    <string name="home_not_on_tv_wizard_wifi_unknown">我們無法確認是誰儲存了這台電視的 Wi-Fi。新主畫面需要關閉設定精靈，而這樣可能會忘記 Wi-Fi，因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_casting">在這台 Google 裝置上，新主畫面需要關閉設定精靈，但這樣每次重啟後從手機投放就會停止運作。因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_boot_loop">在這個電視系列上，設定精靈會在每次重啟時重新出現，而在關閉電視自帶主畫面的情況下，電視可能無法啟動。因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_remote_buttons">在這台電視上，遙控器的應用程式按鈕只能透過它自帶的主畫面運作，因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_wizard_stays_on">我們對這台電視了解不足，無法關閉它的設定精靈；而在保持精靈開啟、關閉電視自帶主畫面的情況下，電視可能當機。因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_home_changed">這台電視的主畫面已被另一個應用程式或以前的改動更改過，因此安裝設定維持現狀，沒有新增我們的。清理功能無需它也能運作。</string>
+    <string name="home_not_on_tv_earlier">安裝設定上次執行時沒有改動主畫面，但此應用程式之後已更新，現在說不定能新增新主畫面。</string>
+    <string name="home_not_on_tv_other_home">這台電視上已設定了另一個主畫面應用程式，因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_next_other_home">要使用新的那個，請移除該應用程式，然後重新執行安裝設定。或者透過「回報問題」告訴我們。</string>
+    <string name="home_not_on_tv_vendor_home">在這台電視上，一個系統服務也會回應主頁按鈕。曾有一台這樣的電視在切換主畫面後無法啟動，因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_patchwall_feeds">在 Mi TV+ 或其網路內容關閉時，PatchWall 仍處於開啟狀態。曾有一台這樣的電視在切換主畫面後無法啟動，因此安裝設定沒有改動主畫面。</string>
+    <string name="home_not_on_tv_next_patchwall_feeds">要使用新的那個，請重新執行安裝設定，並在「自訂」中關閉 PatchWall。</string>
+    <string name="home_not_on_tv_none">新主畫面目前並未安裝在這台電視上。</string>
+    <string name="home_not_on_tv_next_wifi">要更改這一點，請在電視上忘記所有已儲存的 Wi-Fi 網路，然後重新加入你的網路。僅用線路連線並不能改變這一點。然後重新執行安裝設定。</string>
+    <string name="home_not_on_tv_next_check">重新執行安裝設定會再次檢查一次。</string>
+    <string name="home_not_on_tv_next_home_changed">如果你想要新的主畫面，請在電視的設定中，將電視自帶的主畫面重新設為主頁，然後重新執行安裝設定。</string>
+    <string name="home_not_on_tv_next_setup">重新執行安裝設定以新增它。</string>
+    <string name="home_not_on_tv_next_list">能改變這一點的，是針對這台電視製作的清單。「協助新增此電視」會將這台電視的回報寄送給我們；我們根據像你這樣的回報製作清單，並在你的問題單上發布可嘗試的內容。</string>
+    <string name="home_run_setup_again">重新執行安裝設定</string>
+    <string name="home_help_add_tv">協助新增此電視</string>
+    <string name="home_report">回報問題</string>
+    <string name="home_tv_now_title">這是你現在的電視</string>
+    <string name="home_tv_now_cd">電視目前顯示的內容</string>
+    <string name="home_tv_now_again">不對？重新傳送</string>
+    <string name="home_installed_lead">新主畫面已安裝但未被使用。電視自帶的主畫面正在負責。</string>
+    <string name="home_installed_body">「重試切換」會再次執行安裝設定，並在電視上與你一起檢查主畫面。</string>
+    <string name="home_installed_rows_note">在新主畫面投入使用後顯示。</string>
+    <string name="home_try_switch_again">重試切換</string>
+    <string name="home_by_design">這是刻意設計，並非故障：安裝設定是依電視的情況決定的。能改變它的內容列在上方。如果電視此後有了變化，「回報問題」仍能聯繫到我們。</string>
+    <string name="home_tv_list">檢視哪些電視可使用新主畫面</string>
+    <string name="home_report_sent">你在 {date} 傳送了這台電視的回報。一有消息，我們會在你的問題單上發布。你可以再次傳送。</string>
+    <string name="home_fire_tv_name" translatable="false">Fire TV</string>
+    <!-- 在電視自帶 Launcher 設定中所作的更改，會被從手機發出的一次傳送至取代。 -->
+    <string name="home_tv_changes_note">在電視本身上變更的設定，會在你在這裡傳送時被取代。</string>
+    <!-- 外觀列：上次傳送的內容，然後是每列的應用程式數 -->
+    <string name="home_row_look_summary_picture">{style}，使用 {picture}</string>
+    <string name="home_row_look_summary_photo">{style}，使用你的照片</string>
+    <string name="home_row_look_summary_none">{style}，不含圖片</string>
+    <string name="home_row_look_columns">{count, plural, one {每列 # 個應用程式} other {每列 # 個應用程式}}</string>
+    <string name="home_row_look_sending">傳送中……</string>
+    <string name="home_look_failed">外觀未送達電視。</string>
+    <string name="home_look_failed_open">開啟外觀</string>
+
+    <!-- M2 更新主畫面（D4）：我們主畫面的較新版本，覆蓋安裝舊版本 -->
+    <string name="home_row_update">更新主畫面</string>
+    <string name="home_row_update_note">版本 {version} 已就緒。你的停靠欄和外觀將保持原樣。</string>
+    <string name="home_update_preview_title">要更新主畫面嗎？</string>
+    <string name="home_update_preview_body">我們會安裝版本 {version} 以覆蓋電視上的版本。停靠欄、外觀和卡片回答將保留。如果它現在是電視的主畫面，會重啟一次。</string>
+    <string name="home_update_confirm">更新</string>
+    <string name="home_update_done">主畫面已是最新：版本 {version}。</string>
+
+    <!-- M2 使用電視自帶的主畫面：預覽，然後是進度說明 -->
+    <string name="home_stock_preview_title">使用電視自帶的主畫面？</string>
+    <string name="home_stock_preview_body">我們會重新開啟電視自帶的主畫面並將其設為主畫面。新主畫面仍保持安裝。</string>
+    <string name="home_stock_confirm">使用電視自帶的</string>
+    <string name="home_stock_working">正在恢復電視自帶的主畫面……</string>
+    <string name="home_stock_done">電視自帶的主畫面已恢復。我們的仍保持安裝。</string>
+
+    <!-- M2 外觀（主題選擇器） -->
+    <string name="theme_default">預設</string>
+    <string name="home_look_ended_banner">{picture} 已結束。要將你先前的圖片放回電視上嗎？</string>
+    <string name="home_look_ended_restore">放回</string>
+
+    <!-- S3b 你的停靠欄（面板） -->
+    <string name="dock_title">你的停靠欄</string>
+    <string name="dock_body">底部最多 {count, spellout}。拖曳應用程式的圓點以更改順序。</string>
+    <string name="dock_waiting">網格中有 {count, plural, one {# 個應用程式在等待} other {# 個應用程式在等待}}，直到你在「外觀」中為每列選擇更多應用程式。</string>
+
+    <!-- RFC-HELPER-1（測試版）：主頁按鈕協助工具的卡片 -->
+    <string name="helper_card_title">主頁按鈕協助工具</string>
+    <string name="helper_card_on">主頁按鈕會透過一個小型協助工具開啟新主畫面。電視自帶的仍保持開啟，因此投放持續正常運作。</string>
+    <string name="helper_card_off_by_tv">電視已關閉該協助工具（重啟或某個清理應用程式）。請重新執行安裝設定以重新開啟它。</string>
+    <string name="helper_card_no_redirect">協助工具已開啟，但電視上的外觀並未指定電視的主畫面，因此它不作用。請關閉它，或重新執行安裝設定。</string>
+    <string name="helper_card_redirect_only">新主畫面已為該協助工具設定完成，但協助工具處於關閉狀態。請重新執行安裝設定以重新開啟它。</string>
+    <string name="helper_card_escape">在電視上：設定 &gt; 無障礙 &gt; 主頁按鈕，也會將其關閉。</string>
+    <string name="helper_card_apps_only">Google TV 會在背景持續執行。它的「僅應用程式」模式會讓它安靜下來，但也會關閉搜尋和語音助理；你可以在電視的設定中將其開啟。</string>
+    <string name="helper_card_switch_off">關閉</string>
+</resources>

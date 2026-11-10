@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clean Your TV，:feature:backup。繁體中文（TW/HK）資源字串。
+  介面：M6 還原點、復原預覽與確認、匯出，以及恢復出廠設定之前。帶參數的字串使用 ICU MessageFormat 命名參數。
+-->
+<resources>
+
+    <!-- 通用按鈕文字 -->
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">確定</string>
+    <string name="action_done">完成</string>
+
+    <!-- 憑證驗證提示（D17），由「全部還原」觸發 -->
+    <string name="gate_title">確認是你本人</string>
+    <string name="gate_subtitle">在我們改動 {tv} 上的任何內容之前</string>
+    <string name="gate_negative">取消</string>
+    <string name="gate_failed">我們無法確認是你本人，因此未作任何改動。</string>
+
+    <!-- M6 還原點 -->
+    <string name="restore_title">還原點</string>
+    <string name="restore_current">儲存於 {date}</string>
+    <string name="restore_none">還沒有還原點。在第一次改動之前會儲存一個。</string>
+    <string name="restore_read_failed">讀取還原點時發生問題</string>
+    <string name="restore_row_undo">全部還原</string>
+    <string name="restore_row_undo_sub">將電視恢復到 {date} 時的狀態</string>
+    <string name="restore_row_save">儲存副本</string>
+    <string name="restore_row_save_sub">將 zip 檔案儲存到你選擇的位置。</string>
+    <string name="restore_row_factory">恢復出廠設定之前</string>
+    <string name="restore_row_factory_sub">重新開啟設定精靈，以便電視在重置後能正常啟動。</string>
+
+    <!-- 全部還原：預覽（UX 4.13） -->
+    <string name="restore_preview_title">這會將電視恢復到 {date} 時的狀態：</string>
+    <string name="restore_preview_things">{count, plural, one {重新開啟 # 項} other {重新開啟 # 項}}</string>
+    <string name="restore_preview_home">讓電視自帶的主畫面（{name}）重新負責</string>
+    <string name="restore_preview_wizard">重新開啟設定精靈</string>
+    <!-- RFC-HELPER-1（測試版）：全部還原會移除主頁按鈕協助工具 -->
+    <string name="restore_preview_helper">關閉主頁按鈕協助工具</string>
+    <string name="restore_preview_screensaver">將時鐘螢幕保護程式恢復為電視自帶的</string>
+    <string name="restore_preview_keyboard">將鍵盤恢復為電視自帶的</string>
+    <string name="restore_launcher_title">新主畫面</string>
+    <string name="restore_launcher_keep">將其作為普通應用程式保留並繼續安裝</string>
+    <string name="restore_launcher_remove">從電視上移除它</string>
+    <string name="restore_launcher_remove_note">移除它也會一併移除卡片在電視上給出的回答模組。</string>
+    <string name="restore_preview_button">全部還原</string>
+
+    <!-- 全部還原：確認面板 -->
+    <string name="restore_confirm_title">要全部還原嗎？</string>
+    <string name="restore_confirm_body">廣告和追蹤也會隨之回來。你可以隨時重新執行清理。</string>
+    <string name="restore_confirm_button">全部還原</string>
+
+    <!-- 全部還原：進度說明與結束 -->
+    <string name="restore_working_title">正在全部還原</string>
+    <string name="restore_working_things">{total, plural, other {正在重新開啟各項：{done} / #……}}</string>
+    <string name="restore_working_home">正在恢復電視自帶的主畫面……</string>
+    <string name="restore_working_wizard">正在重新開啟設定精靈……</string>
+    <string name="restore_done_title">已全部還原</string>
+    <string name="restore_done_body">你的電視已恢復到 {date} 時的狀態。還原點會被保留，以防你改變主意。</string>
+    <string name="restore_clean_again">重新執行安裝設定</string>
+
+    <!-- 恢復出廠設定之前 -->
+    <string name="restore_factory_title">恢復出廠設定之前</string>
+    <string name="restore_factory_body">恢復出廠設定會讓電視的設定精靈回來，因此我們現在重新開啟它，以便電視隨後能正常啟動。</string>
+    <string name="restore_factory_button">重新開啟設定精靈</string>
+    <string name="restore_factory_working">正在重新開啟設定精靈……</string>
+    <string name="restore_factory_done">設定精靈已重新開啟。你現在可以重置電視了。</string>
+
+    <!-- 儲存副本（匯出） -->
+    <string name="restore_export_saved">已儲存還原點的副本。</string>
+    <string name="restore_export_failed">我們無法儲存副本。請換一個位置試試。</string>
+
+</resources>

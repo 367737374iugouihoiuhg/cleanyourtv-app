@@ -476,10 +476,23 @@ internal fun ColumnScope.ForgetContent(tvName: String, onIntent: (TvSettingsInte
 @Composable
 // RFC-REACH-1: `details` and `onDetails` drive "Connection details" (the app collects and copies or shares the block).
 fun AppSettingsScreen(state: AppSettingsState, onIntent: (AppSettingsIntent) -> Unit, onBack: () -> Unit, onOpenRelease: () -> Unit, modifier: Modifier = Modifier,
-    details: DetailsUi = DetailsUi(), onDetails: (share: Boolean) -> Unit = {}) {
+    details: DetailsUi = DetailsUi(), onDetails: (share: Boolean) -> Unit = {},
+    language: String = "auto", onLanguageChange: (String) -> Unit = {}) {
     var licences by rememberSaveable { mutableStateOf(false) }
     var connection by rememberSaveable { mutableStateOf(false) }
     var privacy by rememberSaveable { mutableStateOf(false) }
+    var languageOpen by rememberSaveable { mutableStateOf(false) }
+    // M8: the app's own language. Each non-system choice shows its own name in its own script
+    // (English, 简体中文, 繁體中文) so it stays findable whichever language is now on; the
+    // follow-system row is translated into the language currently in use.
+    val langOptions = listOf(
+        ChoiceOption("auto", stringResource(R.string.appsettings_language_auto)),
+        ChoiceOption("en", "English"),
+        ChoiceOption("zh-Hans", "简体中文"),
+        ChoiceOption("zh-Hant", "繁體中文"),
+    )
+    val langTitle = langOptions.firstOrNull { it.key == language }?.title
+        ?: stringResource(R.string.appsettings_language_auto)
     ScreenScaffold(Glow.Tv, modifier, topBar = { CytTopBar(onBack = onBack) }) {
         ScreenTitle(stringResource(R.string.appsettings_title), titleTop)
         ListGroup(Modifier.padding(top = 20.dp)) {
@@ -488,6 +501,9 @@ fun AppSettingsScreen(state: AppSettingsState, onIntent: (AppSettingsIntent) -> 
             ListDivider()
             SwitchRow(stringResource(R.string.appsettings_haptics), state.prefs.haptics, { onIntent(AppSettingsIntent.SetHaptics(it)) },
                 subtitle = stringResource(R.string.appsettings_haptics_note))
+            ListDivider()
+            ListRow(stringResource(R.string.appsettings_language), subtitle = stringResource(R.string.appsettings_language_note),
+                value = langTitle, onClick = { languageOpen = true })
         }
         SectionLabel(stringResource(R.string.appsettings_about))
         ListGroup {
@@ -541,6 +557,10 @@ fun AppSettingsScreen(state: AppSettingsState, onIntent: (AppSettingsIntent) -> 
     if (licences) CytBottomSheet({ licences = false }) { LicencesContent() }
     if (privacy) CytBottomSheet({ privacy = false }) { PrivacyContent(online = state.updateCheck || state.addOns) }
     if (connection) CytBottomSheet({ connection = false }) { DetailsContent(details, onDetails) }
+    if (languageOpen) CytBottomSheet({ languageOpen = false }) {
+        SheetHeader(stringResource(R.string.appsettings_language))
+        ChoiceList(langOptions, language) { o -> languageOpen = false; onLanguageChange(o.key) }
+    }
     state.confirm?.let { what ->
         CytBottomSheet({ onIntent(AppSettingsIntent.CancelConfirm) }) { ConfirmContent(what, state.working, onIntent) }
     }

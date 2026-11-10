@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clean Your TV，:feature:launcher。简体中文资源字符串。
+  界面：M2 主屏幕、主题选择器，以及停靠栏面板（S3b）。带参数的字符串使用 ICU MessageFormat 命名参数。
+-->
+<resources>
+
+    <!-- 通用按钮文字 -->
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_done">完成</string>
+    <string name="action_undo">撤销</string>
+
+    <!-- 凭据验证提示（D17），由“重新发送我的主屏幕”和“使用电视自带的主屏幕”触发 -->
+    <string name="gate_title">确认是你本人</string>
+    <string name="gate_subtitle">在我们改动 {tv} 上的任何内容之前</string>
+    <string name="gate_negative">取消</string>
+    <string name="gate_failed">我们无法确认是你本人，因此未作任何改动。</string>
+
+    <!-- M2 主屏幕 -->
+    <string name="home_title">主屏幕</string>
+    <string name="home_row_dock">停靠栏</string>
+    <!-- 停靠栏行的副标题：停靠栏中的应用，以及下方还有多少个 -->
+    <string name="home_row_dock_rows">{names}，下方还有 {count, plural, one {# 个应用} other {# 个应用}}</string>
+    <string name="home_row_look">外观</string>
+    <string name="home_tcl_remote_keys">在 TCL Google TV 上，遥控器上的设置（齿轮）、Netflix 和 YouTube 按钮在使用新主屏幕时无法工作。要恢复它们，请选择“使用电视自带的主屏幕”。</string>
+    <!-- 在 TCL 之外的 Google TV 品牌，其遥控器的设置按钮可能停止工作 -->
+    <string name="home_google_tv_settings_key">在 Google TV 上，遥控器上的设置（齿轮）按钮会打开 Google TV 自带的设置面板，该面板在许多电视上同时包含当前信号源的画质与声音设置。使用新主屏幕时，它可能失效。要恢复它，请选择“使用电视自带的主屏幕”。</string>
+    <string name="home_row_stock">使用电视自带的主屏幕</string>
+    <string name="home_row_stock_note">恢复电视自带的主屏幕。我们的主屏幕仍保持安装，因此你可以再次切换。</string>
+    <string name="home_drift_banner">电视上的主屏幕设置在你设置之后已被更改。</string>
+    <string name="home_drift_restore">重新发送我的主屏幕</string>
+    <string name="home_applying">正在更新电视上的主屏幕……</string>
+    <string name="home_snackbar_done">完成。</string>
+
+    <!-- 新主屏幕未安装在这台电视上，因此没有停靠栏或外观可更改。 -->
+    <string name="home_not_on_tv_lead">{tv} 保留自己的主屏幕。停靠栏和外观属于新主屏幕，而它并未在这台电视上。</string>
+    <string name="home_not_on_tv_refuses">{brand} 只允许使用自带的主屏幕，因此安装设置没有添加我们的主屏幕。清理功能无需它也能工作。</string>
+    <string name="home_not_on_tv_old_android">新主屏幕需要 Android 8 或更高版本，因此安装设置没有添加它。清理功能无需它也能工作。</string>
+    <string name="home_not_on_tv_unknown_home">我们对这台电视自带的主屏幕了解不够，无法安全地切换，因此安装设置没有改动它。</string>
+    <string name="home_not_on_tv_wizard_wifi">这台电视的 Wi-Fi 是由它的设置向导保存的。新主屏幕需要关闭设置向导，而这会忘记 Wi-Fi；若保持向导开启，电视可能会崩溃。因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_wizard_wifi_unlisted">这台电视的 Wi-Fi 是由它的设置向导保存的，而我们对这台电视了解还不够，无法安全地关闭该向导。若保持向导开启，新主屏幕可能导致电视崩溃，因此安装设置没有改动它。</string>
+    <string name="home_not_on_tv_wizard_wifi_unknown">我们无法确认是谁保存了这台电视的 Wi-Fi。新主屏幕需要关闭设置向导，而这可能会忘记 Wi-Fi，因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_casting">在这台 Google 设备上，新主屏幕需要关闭设置向导，但这样一来每次重启后手机投屏就会停止工作。因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_boot_loop">在这个电视系列上，设置向导会在每次重启时重新出现，而在关闭电视自带主屏幕的情况下，电视可能无法启动。因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_remote_buttons">在这台电视上，遥控器的应用按钮只能通过它自带的主屏幕工作，因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_wizard_stays_on">我们对这台电视了解不够，无法关闭它的设置向导；而在保持向导开启、关闭电视自带主屏幕的情况下，电视可能崩溃。因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_home_changed">这台电视的主屏幕已经被另一个应用或以前的更改改动过，因此安装设置保持原样，没有添加我们的主屏幕。清理功能无需它也能工作。</string>
+    <string name="home_not_on_tv_earlier">安装设置上次运行时没有改动主屏幕，但此应用之后已有更新，现在也许能添加新主屏幕。</string>
+    <string name="home_not_on_tv_other_home">这台电视上已设置了另一个主屏幕应用，因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_next_other_home">要使用新主屏幕，请移除那个应用，然后重新运行安装设置。或者通过“报告问题”告诉我们。</string>
+    <string name="home_not_on_tv_vendor_home">在这台电视上，一个系统服务也会响应主页按钮。曾有这样一台电视在切换主屏幕后无法启动，因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_patchwall_feeds">在 Mi TV+ 或其网络内容关闭时，PatchWall 仍处于开启状态。曾有这样一台电视在切换主屏幕后无法启动，因此安装设置没有改动主屏幕。</string>
+    <string name="home_not_on_tv_next_patchwall_feeds">要使用新主屏幕，请重新运行安装设置，并在“自定义”中关闭 PatchWall。</string>
+    <string name="home_not_on_tv_none">新主屏幕当前并未安装在这台电视上。</string>
+    <string name="home_not_on_tv_next_wifi">要更改这一点，请在电视上忘记所有已保存的 Wi-Fi 网络，然后重新加入你的网络。仅用网线连接并不能改变这一点。然后重新运行安装设置。</string>
+    <string name="home_not_on_tv_next_check">重新运行安装设置会再次检查一次。</string>
+    <string name="home_not_on_tv_next_home_changed">如果你想要新主屏幕，请在电视的设置中把电视自带的主屏幕重新设为主页，然后重新运行安装设置。</string>
+    <string name="home_not_on_tv_next_setup">重新运行安装设置以添加它。</string>
+    <string name="home_not_on_tv_next_list">能改变这一点的是针对这台电视制作的列表。“帮助添加此电视”会把这台电视的报告发送给我们；我们依据像你这样的报告来制作列表，并在你的问题反馈中发布可尝试的内容。</string>
+    <string name="home_run_setup_again">重新运行安装设置</string>
+    <string name="home_help_add_tv">帮助添加此电视</string>
+    <string name="home_report">报告问题</string>
+    <string name="home_tv_now_title">这是你现在的电视</string>
+    <string name="home_tv_now_cd">电视当前显示的内容</string>
+    <string name="home_tv_now_again">不正确？重新发送</string>
+    <string name="home_installed_lead">新主屏幕已安装但未在使用中。电视自带的主屏幕正在负责。</string>
+    <string name="home_installed_body">“重试切换”会再次运行安装设置，并与你在电视上一起检查主屏幕。</string>
+    <string name="home_installed_rows_note">在新主屏幕投入使用后显示。</string>
+    <string name="home_try_switch_again">重试切换</string>
+    <string name="home_by_design">这是有意为之，并非故障：安装设置是根据电视的情况决定的。能改变它的内容列在上方。如果电视此后发生了变化，“报告问题”仍能联系到我们。</string>
+    <string name="home_tv_list">查看哪些电视支持新主屏幕</string>
+    <string name="home_report_sent">你在 {date} 发送了这台电视的报告。一有消息，我们会在你的问题反馈中发布。你可以再次发送。</string>
+    <string name="home_fire_tv_name" translatable="false">Fire TV</string>
+    <!-- 在电视自带 Launcher 设置中所作的更改，会被从手机发出的一次发送所替换。 -->
+    <string name="home_tv_changes_note">在电视本身上更改的设置，会在你从此处发送时被替换。</string>
+    <!-- 外观行：上次发送的内容，然后是每行的应用数 -->
+    <string name="home_row_look_summary_picture">{style}，使用 {picture}</string>
+    <string name="home_row_look_summary_photo">{style}，使用你的照片</string>
+    <string name="home_row_look_summary_none">{style}，不含图片</string>
+    <string name="home_row_look_columns">{count, plural, one {每行 # 个应用} other {每行 # 个应用}}</string>
+    <string name="home_row_look_sending">正在发送……</string>
+    <string name="home_look_failed">外观未能送达电视。</string>
+    <string name="home_look_failed_open">打开外观</string>
+
+    <!-- M2 更新主屏幕（D4）：我们主屏幕的较新版本，覆盖安装旧版本 -->
+    <string name="home_row_update">更新主屏幕</string>
+    <string name="home_row_update_note">版本 {version} 已就绪。你的停靠栏和外观将保持原样。</string>
+    <string name="home_update_preview_title">要更新主屏幕吗？</string>
+    <string name="home_update_preview_body">我们会安装版本 {version} 以覆盖电视上的版本。停靠栏、外观和卡片回答将保留。如果它现在是电视的主屏幕，会重启一次。</string>
+    <string name="home_update_confirm">更新</string>
+    <string name="home_update_done">主屏幕已是最新：版本 {version}。</string>
+
+    <!-- M2 使用电视自带的主屏幕：预览，然后是进度说明 -->
+    <string name="home_stock_preview_title">使用电视自带的主屏幕？</string>
+    <string name="home_stock_preview_body">我们会重新启用电视自带的主屏幕并将其设为主屏幕。新主屏幕仍保持安装。</string>
+    <string name="home_stock_confirm">使用电视自带的</string>
+    <string name="home_stock_working">正在把电视自带的主屏幕恢复……</string>
+    <string name="home_stock_done">电视自带的主屏幕已恢复。我们的仍保持安装。</string>
+
+    <!-- M2 外观（主题选择器） -->
+    <string name="theme_default">默认</string>
+    <string name="home_look_ended_banner">{picture} 已结束。要把你之前的图片放回电视上吗？</string>
+    <string name="home_look_ended_restore">放回</string>
+
+    <!-- S3b 你的停靠栏（面板） -->
+    <string name="dock_title">你的停靠栏</string>
+    <string name="dock_body">底部最多 {count, spellout}。拖动应用的圆点以更改顺序。</string>
+    <string name="dock_waiting">网格中有 {count, plural, one {# 个应用等待} other {# 个应用等待}}，直到你在“外观”中为每行选择更多应用。</string>
+
+    <!-- RFC-HELPER-1（测试版）：主页按钮助手的卡片 -->
+    <string name="helper_card_title">主页按钮助手</string>
+    <string name="helper_card_on">主页按钮通过一个小型助手打开新主屏幕。电视自带的主屏幕仍保持开启，因此投屏继续正常工作。</string>
+    <string name="helper_card_off_by_tv">电视已关闭该助手（重启或某个清理应用）。请重新运行安装设置以重新开启它。</string>
+    <string name="helper_card_no_redirect">助手已开启，但电视上的外观没有指定电视的主屏幕，因此它不起作用。请关闭它，或重新运行安装设置。</string>
+    <string name="helper_card_redirect_only">新主屏幕已为该助手设置好，但助手处于关闭状态。请重新运行安装设置以重新开启它。</string>
+    <string name="helper_card_escape">在电视上：设置 &gt; 无障碍 &gt; 主页按钮，也会将其关闭。</string>
+    <string name="helper_card_apps_only">Google TV 会在后台继续运行。它的“仅应用”模式会让它安静下来，但也会关闭搜索和语音助手；你可以在电视的设置中将其开启。</string>
+    <string name="helper_card_switch_off">关闭</string>
+</resources>

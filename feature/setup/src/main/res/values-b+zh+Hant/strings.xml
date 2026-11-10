@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clean Your TV，:feature:setup。繁體中文（zh-Hant）字串。
+  所有帶參數的字串均為使用大括號命名參數的 ICU MessageFormat。
+  translatable="false" 的元素原樣保留，不翻譯。
+-->
+<resources>
+
+    <!-- 通用按鈕 -->
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">確定</string>
+    <string name="action_done">完成</string>
+    <string name="action_undo">復原</string>
+
+    <!-- 憑證確認（D17） -->
+    <string name="gate_title">確認是你本人</string>
+    <string name="gate_subtitle">在我們更改 {tv} 上的任何內容之前</string>
+    <string name="gate_negative">取消</string>
+    <string name="gate_failed">我們無法確認是你本人，因此未作任何更改。</string>
+
+    <!-- 通知（D18、D16） -->
+    <string name="notify_channel_name">正在設定電視</string>
+    <string name="notify_channel_description">手機在變更電視內容時顯示進度，並在需要你檢視電視時提醒你。</string>
+    <string name="notify_progress" formatted="false">正在設定 {tv}，{percent}%</string>
+    <string name="notify_look">請檢視電視。點按以回應。</string>
+    <string name="notify_rationale">到了需要檢視電視時我們會提醒你。允許通知，如此手機放在口袋裡也能收到。</string>
+    <string name="notify_rationale_allow">允許通知</string>
+    <string name="notify_rationale_skip">稍後再說</string>
+
+    <!-- S2d 到 S3：探查 -->
+    <string name="probing_line">正在讀取電視上的內容……</string>
+    <string name="probing_progress_cd">正在讀取電視上的內容</string>
+
+    <!-- 停止：探查失敗 -->
+    <string name="stop_probe_failed_title">我們無法讀取電視上的內容</string>
+    <string name="stop_probe_failed_body">讀取時電視停止了回應。未作任何更改。請確認電視仍處於開機狀態，然後重試。</string>
+    <string name="stop_probe_failed_primary">重試</string>
+    <string name="stop_probe_failed_secondary">返回</string>
+    <string name="stop_probe_failed_tertiary">顯示詳細資料</string>
+    <string name="stop_plan_refused_title">我們無法為這台電視制定安全的方案</string>
+    <string name="stop_plan_refused_body">電視已回應，但我們在它上面發現的內容不符合我們確信安全的方案，因此在執行任何動作前就停止了。未作任何更改。「問題回報」會將原因傳送給我們，以便我們修正。</string>
+
+    <!-- S3 我們的發現 -->
+    <string name="found_title">{count, plural, =0 {沒有可停用的內容。想要新的主畫面嗎？} one {我們發現一項可停用的內容} other {我們發現 # 項可停用的內容}}</string>
+    <string name="found_headline">{count, plural, =0 {沒有可停用的內容。想要新的主畫面嗎？} one {項可停用的內容} other {項可停用的內容}}</string>
+    <string name="found_overline">我們發現</string>
+    <string name="found_zero_body">這台電視已經整潔。</string>
+    <string name="found_title_zero_kept">沒有可停用的內容</string>
+    <string name="found_zero_kept_body">這台電視已經整潔，並保留自己的主畫面，因此無需操作。</string>
+    <string name="found_zero_kept_unknown_body">我們對這台電視上的內容沒有把握，而且它保留自己的主畫面，因此暫時無法操作。我們會依你的這類回報產生清單，當有可嘗試的方案時，我們會在你的 issue 中留言。</string>
+    <string name="found_switch_home">切換主畫面</string>
+    <string name="found_group_ads">廣告和推廣列</string>
+    <string name="found_group_tracking">追蹤與分析</string>
+    <string name="found_group_nobody">沒人要求安裝的應用程式</string>
+    <string name="found_group_brand">{brand} 附加內容</string>
+    <string name="found_group_shop">商店和示範模式</string>
+    <string name="found_group_needed">新主畫面所需</string>
+    <string name="found_group_count_cd">{group}：{count, plural, one {# 項} other {# 項}}</string>
+    <string name="found_see_list">檢視清單</string>
+    <string name="found_keep_intro">我們會保留你使用的所有內容：</string>
+    <string name="found_keep_paragraph">我們會保留你使用的所有內容：{apps}、{fixed}。</string>
+    <string name="found_keep_paragraph_no_apps">我們會保留你使用的所有內容：{fixed}。</string>
+    <string name="found_keep_fixed">電視直播和 HDMI、遙控器、鍵盤、Chromecast、語音助理和軟體更新</string>
+    <string name="found_keep_fixed_fire">電視直播和 HDMI、遙控器、鍵盤、語音助理和軟體更新</string>
+    <string name="found_home_row">主畫面：{dock}</string>
+    <string name="found_home_row_rows">主畫面：{dock}，下方另有 {count, plural, one {# 個應用程式} other {# 個應用程式}}</string>
+    <string name="found_home_row_cd">主畫面底部列：{dock}</string>
+    <string name="found_home_change">更改</string>
+    <string name="found_home_row_empty">你的新主畫面</string>
+    <string name="found_safety">我們會先儲存一個還原點，因此所有內容都能還原。</string>
+    <string name="found_make_clean">開始清理</string>
+    <string name="found_customise">自訂</string>
+    <string name="found_replaces_launcher">將取代這台電視上已有的主畫面應用程式。其外觀、應用程式順序、設定和卡片回答都會重新開始。</string>
+    <string name="found_tcl_remote_keys">在 TCL Google TV 上，遙控器的設定（齒輪）、Netflix 和 YouTube 按鈕在使用新主畫面後將失效。若要恢復它們，請在「主畫面」頁面選擇「使用電視自己的主畫面」。</string>
+    <string name="found_google_tv_settings_key">在 Google TV 上，遙控器的設定（齒輪）按鈕會開啟 Google TV 自己的設定面板；在許多電視上，該面板也包含你正在觀看的輸入的影像和音效設定。使用新主畫面後它可能失效。若要恢復它，請在「主畫面」頁面選擇「使用電視自己的主畫面」。</string>
+    <string name="found_no_lock">這支手機沒有螢幕鎖定，因此我們無法再次確認是你本人。</string>
+    <string name="found_unknown_title">{count, plural, =0 {我們沒有發現有把握的內容} one {我們發現一項有把握的內容} other {我們發現 # 項有把握的內容}}</string>
+    <string name="found_unknown_headline">{count, plural, =0 {我們沒有發現有把握的內容} one {項有把握的內容} other {項有把握的內容}}</string>
+    <string name="found_unknown_body">我們之前不曾遇過這款確切的電視，所以我們會保持謹慎。一旦我們為這台電視產生清單，就能停用更多內容。「協助新增這台電視」即可產生清單。</string>
+    <string name="found_help_add_tv">協助新增這台電視</string>
+    <string name="found_report_sent">你於 {date} 發送了這台電視的回報。有新進展時我們會在你的 issue 中留言。你可以再次發送。</string>
+    <string name="fire_tv_name" translatable="false">Fire TV</string>
+    <string name="kept_outcome">電視保留自己的主畫面。</string>
+    <string name="helper_outcome">Home 鍵會開啟新的主畫面。</string>
+    <string name="helper_outcome_body">電視自己的主畫面保持啟用，因此投放繼續可用。</string>
+    <string name="kept_outcome_short">主畫面：電視自己的</string>
+    <string name="kept_why">原因</string>
+    <string name="kept_why_title">電視為何保留自己的主畫面</string>
+    <string name="kept_what_changes_title">什麼會改變它</string>
+    <string name="kept_tv_list">檢視哪些電視會取得新主畫面</string>
+    <string name="kept_clean_up_note">我們仍會停用廣告、追蹤，以及在背景執行的應用程式。由電視自己的主畫面繪製的廣告則隨之保留。</string>
+    <string name="kept_reason_tv_refuses">{brand} 電視只允許使用自己的主畫面。</string>
+    <string name="kept_reason_fire_tv">Fire TV 只允許使用自己的主畫面。</string>
+    <string name="kept_reason_old_android">新主畫面需要 Android 8 或更新版本。</string>
+    <string name="kept_reason_unknown_home">我們對這台電視的主畫面了解不足，無法安全地切換。</string>
+    <string name="kept_reason_wizard_wifi">它的設定精靈保存著 Wi-Fi，而切換需要關閉該精靈。</string>
+    <string name="kept_reason_wizard_wifi_unknown">我們無法確認是誰保存了它的 Wi-Fi。</string>
+    <string name="kept_reason_casting">切換會導致手機投放每次重新開機後失效。</string>
+    <string name="kept_reason_boot_loop">切換可能導致這一族的電視無法開機。</string>
+    <string name="kept_reason_remote_buttons">遙控器的應用程式按鈕只在電視自己的主畫面上有效。</string>
+    <string name="kept_reason_wizard_stays_on">它的設定精靈會保持開啟，這可能導致電視當機。</string>
+    <string name="kept_reason_home_changed">它的主畫面此前已被更改，因此我們不作變動。</string>
+    <string name="kept_reason_other_home">它上面已設定了另一個主畫面應用程式。</string>
+    <string name="kept_reason_vendor_home">某項系統服務也會回應 Home 鍵。</string>
+    <string name="kept_reason_patchwall_feeds">PatchWall 處於開啟而 Mi TV+ 處於關閉。關閉 PatchWall 即可取得新主畫面。</string>
+    <string name="kept_reason_none">這台電視目前無法進行切換。</string>
+    <string name="found_home_tv_refuses">{brand} 電視只允許使用自己的主畫面，且新主畫面無法安裝。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_fire_tv">Fire TV 只允許使用自己的主畫面，且新主畫面無法安裝。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_old_android">新主畫面需要 Android 8 或更新版本，而這台電視執行的是更早的版本。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_changed">這台電視的主畫面此前已被另一個應用程式或更早的更改所取代，我們不會撤銷這樣的選擇。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_unknown_stock">我們對這台電視自帶的主畫面了解不足，無法安全地切換。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_wizard_wifi">這台電視的 Wi-Fi 是由它的設定精靈保存的。新主畫面需要關閉該精靈，而這會清除 Wi-Fi；若精靈保持開啟，電視可能當機。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_wizard_wifi_unlisted">這台電視的 Wi-Fi 是由它的設定精靈保存的，是我們對這台電視還不夠了解，無法安全地關閉該精靈。若精靈保持開啟，新主畫面可能導致電視當機。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_wizard_wifi_unknown">我們無法確認是誰保存了這台電視的 Wi-Fi。新主畫面需要關閉設定精靈，而這可能清除 Wi-Fi；若精靈保持開啟，電視可能當機。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_casting">在這台 Google 裝置上，新主畫面需要關閉設定精靈，而沒有了它，手機投放會在每次重新開機後失效。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_boot_loop">在這個電視系列上，設定精靈會在每次重新開機時回來，而若關閉電視自帶的主畫面，這可能導致電視無法開機。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_remote_buttons">在這台電視上，遙控器的應用程式按鈕（Netflix、YouTube、Prime Video 和 YouTube Music）只能透過它自帶的主畫面使用。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_vendor_home">這台電視上有某項系統服務也會回應 Home 鍵。曾有一台這樣的電視在切換主畫面後無法開機。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_patchwall_feeds">在這裡 PatchWall 處於開啟而 Mi TV+ 或其網頁內容處於關閉。曾有一台這樣的電視在切換主畫面後無法開機。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_other_home">這台電視上已設定了另一個主畫面應用程式，而我們不會停用我們不認識的應用程式。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_wizard_stays_on">我們對這台電視了解不足，無法關閉它的設定精靈；若精靈保持開啟而電視自帶的主畫面被關閉，電視可能當機。因此這台電視保留自己的主畫面。</string>
+    <string name="found_home_none">依這台電視目前的狀態無法進行主畫面切換。因此這台電視保留自己的主畫面。</string>
+    <string name="kept_next_wifi">若要更改這點，請在電視上解除儲存所有已儲存的 Wi-Fi 網路，然後重新加入你的網路。僅用線材無法更改。之後再次執行設定。</string>
+    <string name="kept_next_wifi_unknown">再次執行設定會再檢查一次。</string>
+    <string name="kept_next_home_changed">如果你想要新主畫面，請在電視的設定中將電視自己的主畫面重新設為 Home，然後再次執行設定。</string>
+    <string name="kept_next_other_home">若要使用新的主畫面，請移除那個應用程式，然後再次執行設定。或透過「問題回報」告訴我們。</string>
+    <string name="kept_next_patchwall_feeds">若要取得新主畫面，請在自訂的「廣告和推廣列」下關閉 PatchWall。</string>
+    <string name="kept_next_list">能改變這點的是為這台電視製作的清單。「協助新增這台電視」會向我們傳送它的回報；我們會依你的這類回報製作清單，並在有可嘗試的方案時在你的 issue 中留言。</string>
+    <string name="kept_next_nothing">這來自電視本身，因此本應用程式的任何更新都不會改變它。清理就是它能得到的全部。</string>
+
+    <!-- S3a 自訂面板 -->
+    <string name="customise_title">自訂</string>
+    <string name="customise_live">{total, plural, other {已停用 {off} 項（共 # 項）}}</string>
+    <string name="customise_nothing_deleted">不會刪除任何內容；「停用」即進入休眠。</string>
+    <string name="customise_show_fewer">顯示較少</string>
+    <string name="customise_group_voice">語音助理</string>
+    <string name="customise_group_cast">Chromecast</string>
+    <string name="customise_group_updates">軟體更新</string>
+    <string name="customise_group_streaming">你不使用的串流應用程式</string>
+    <string name="customise_group_brand_features">{brand} 功能</string>
+    <string name="customise_updates_note">保持開啟，以便電視持續獲得安全性修正。停用它也會一併停止更新提醒。</string>
+    <string name="customise_wizard_name">設定精靈</string>
+    <string name="customise_wizard_off">作為主畫面切換的一部分被停用。復原時會重新開啟。</string>
+    <string name="customise_own_home_off">電視自己的主畫面。僅在新主畫面正常運作後才停用。</string>
+    <string name="customise_switch_part">屬於主畫面切換的一部分；若撤銷切換會重新開啟。</string>
+    <string name="customise_wizard_kept">保持開啟。這台電視保留自己的主畫面，其設定精靈也隨之保留。</string>
+    <string name="customise_wizard_helper">保持開啟。Home 鍵輔助與電視自己的主畫面及其設定精靈搭配運作。</string>
+    <string name="customise_own_home_helper">電視自己的主畫面。它保持開啟，而 Home 鍵會開啟新的主畫面。</string>
+    <string name="customise_own_home_kept">電視自己的主畫面。它會保留，因為這台電視保留它。</string>
+    <string name="customise_protected_title">我們會保留這些</string>
+    <string name="customise_protected_pill">受保護</string>
+    <string name="customise_protected_why_title">我們為何保留這一項</string>
+    <string name="customise_group_home">主畫面</string>
+    <string name="customise_dock_row">底部列：{names}</string>
+    <string name="customise_dock_row_rows">底部列：{names}，下方 {rows, plural, one {列} other {列}}中另有 {count, plural, one {# 個應用程式} other {# 個應用程式}}</string>
+    <string name="customise_dock_row_empty">底部列</string>
+    <string name="customise_look_row">外觀：{theme}</string>
+    <string name="customise_look_photo">帶有你的照片的{style}</string>
+    <string name="customise_look_picture">帶有{picture}的{style}</string>
+    <string name="customise_look_row_count">外觀：{theme}，{count, plural, one {# 個應用程式在其中一列} other {# 個應用程式在其中一列}}</string>
+    <string name="look_photo_after">尚未發送任何內容。當你點按「開始清理」時，它會傳送到電視。</string>
+    <string name="customise_group_tv">在電視上</string>
+    <string name="customise_show_on_tv">在電視上顯示進度</string>
+    <string name="customise_show_on_tv_note">我們在操作時，電視會顯示每個步驟</string>
+    <string name="customise_group_afterwards">之後</string>
+    <string name="customise_keep_debugging">保持偵錯開啟</string>
+    <string name="customise_keep_debugging_warning">你 Wi-Fi 上的其他裝置可能會請求連線</string>
+    <string name="customise_group_commands">顯示指令</string>
+    <string name="customise_commands_intro">我們將依序執行的每一條指令。</string>
+    <string name="customise_copy_commands">複製為指令</string>
+    <string name="customise_commands_copied">已複製</string>
+    <string name="customise_snackbar_kept">將保留 {name}。</string>
+    <string name="customise_snackbar_off">將停用 {name}。</string>
+    <string name="customise_snackbar_off_home_back">將停用 {name}。新的主畫面已重新加入方案。</string>
+    <string name="customise_snackbar_kept_home_own">將保留 {name}。電視保留自己的主畫面。</string>
+
+    <!-- 主題（S3a 主題選擇器） -->
+    <string name="theme_default">預設</string>
+    <string name="theme_aurora">極光</string>
+    <string name="theme_six_columns">六欄</string>
+    <string name="theme_card_cd">{name}。{description}</string>
+    <string name="theme_card_selected_cd">{name}，已選取。{description}</string>
+
+    <!-- S3b 你的底部列（面板） -->
+    <string name="dock_title">你的底部列</string>
+    <string name="dock_body">底部最多 {count, spellout} 個。拖動應用程式上的圓點即可更改順序。</string>
+
+    <!-- S4a 正在清理 -->
+    <string name="working_title">正在清理</string>
+    <string name="working_step_restore_active">正在儲存還原點……</string>
+    <string name="working_step_restore_done">還原點已儲存</string>
+    <string name="working_group_ads">廣告</string>
+    <string name="working_group_tracking">追蹤</string>
+    <string name="working_group_nobody">沒人要求安裝的應用程式</string>
+    <string name="working_group_brand">{brand} 附加內容</string>
+    <string name="working_group_shop">商店和示範模式</string>
+    <string name="working_step_group_active">{total, plural, other {{group}：已停用 {done} 項（共 # 項）……}}</string>
+    <string name="working_step_group_done">{count, plural, other {{group}已停用 # 項}}</string>
+    <string name="working_step_install_active">正在安裝新的主畫面</string>
+    <string name="working_step_install_done">新主畫面已安裝</string>
+    <string name="working_step_replace_active">正在取代主畫面應用程式</string>
+    <string name="working_step_replace_done">主畫面應用程式已取代</string>
+    <string name="working_step_home_active">正在切換 Home</string>
+    <string name="working_step_home_done">Home 已切換</string>
+    <string name="working_step_done_cd">{step}，已完成</string>
+    <string name="working_thumbnail_caption">電視即時畫面</string>
+    <string name="working_thumbnail_cd">電視即時畫面</string>
+    <string name="working_keep_on">請讓電視保持開機。你可以放下手機；到了需要檢視電視時我們會提醒你。</string>
+    <string name="working_keep_on_no_check">請讓電視保持開機。你可以放下手機；完成時我們會提醒你。</string>
+    <string name="working_stop">停止並復原</string>
+    <string name="working_putting_back">正在歸回電視自己的主畫面……</string>
+    <string name="working_stopping">正在停止並復原我們的操作……</string>
+
+    <!-- S4b 你看到了嗎？ -->
+    <string name="check_overline">請檢視電視</string>
+    <string name="check_title">你看到了嗎？</string>
+    <string name="check_thumbnail_cd">{count, plural, =0 {電視顯示新的主畫面，底部列為空} one {電視顯示新的主畫面，底部列中有一個應用程式} other {電視顯示新的主畫面，底部列中有 # 個應用程式}}</string>
+    <string name="check_dock_sentence">新的主畫面，底部為 {dock}。</string>
+    <string name="check_dock_sentence_empty">新的主畫面。</string>
+    <string name="check_press_home">只在遙控器上按一次 Home 鍵。不要在電視上開啟其他任何內容。</string>
+    <string name="check_live_ok">Home 會開啟新的畫面</string>
+    <string name="check_live_pending_cd">尚未檢查</string>
+    <string name="check_live_done_cd">已檢查</string>
+    <string name="check_countdown_text">如果我們沒有收到你的回應，我們會自行歸回電視自己的主畫面。無需擔心。</string>
+    <string name="check_thumbnail_note">如果你看不到電視，上方的圖片就是它現在顯示的內容。</string>
+    <string name="check_no_thumbnail_note">我們無法擷取圖片；請檢視電視。</string>
+    <string name="check_yes">看到了</string>
+    <string name="check_no">沒看到，歸回它</string>
+
+    <!-- 停止：電視自己的主畫面已歸回（UX 4.7）。0.4.7（UX 發現 20）：各處都用「電視自己的主畫面」，絕不用「舊主畫面」；再次進入的方式是「再次執行設定」和「開啟這台電視的主畫面」（頁面的可見標題），絕不從「管理」進入。 -->
+    <string name="stop_show_details">顯示詳細資料</string>
+    <string name="stop_report">問題回報</string>
+    <string name="stop_home_wait_hint">請等幾秒鐘。</string>
+    <string name="stop_home_setupwraith_title">電視自己的主畫面已歸回</string>
+    <string name="stop_home_setupwraith_secondary">保留電視自己的主畫面</string>
+    <string name="stop_home_setupwraith_wifi_body">你的電視的 Wi-Fi 是由它的設定精靈保存的，因此關閉該精靈會清除 Wi-Fi。若要嘗試切換，請先在電視上解除儲存所有已儲存的 Wi-Fi 網路並重新加入你的網路。僅用線材無法改變這點。</string>
+    <string name="stop_home_setupwraith_wifi_secondary">我已完成，重試</string>
+    <string name="stop_home_setupwraith_wifi_unknown_body">我們無法確認是誰保存了這台電視的 Wi-Fi，因此保留它的設定精靈開啟，以保護 Wi-Fi。</string>
+    <string name="stop_home_other_launcher_title">電視自己的主畫面已歸回</string>
+    <string name="stop_home_other_launcher_body">另一個主畫面應用程式 {launcher} 正在接管 Home。我們不會停用我們不認識的應用程式。請選擇你想要哪一個。</string>
+    <string name="stop_home_other_launcher_primary">使用新的主畫面</string>
+    <string name="stop_home_other_launcher_secondary">保留 {launcher}</string>
+    <string name="stop_home_settings_open_body">檢查期間電視上開啟了一個設定頁面，出於安全我們歸回了電視自己的主畫面。你的電視沒有任何問題。請重試，這次只在遙控器上按 Home 鍵。</string>
+    <string name="stop_home_low_storage_body">電視儲存空間幾乎用盡（剩餘 {free, plural, other {# MB}}），因此新主畫面無法安裝。電視自己的主畫面保留，我們做的其他所有變更都予以保留。請在「設定」 > 「儲存空間」中為電視騰出一些空間，然後再次執行設定。</string>
+    <string name="stop_home_chooser_body">{count, plural, one {電視上安裝了另一個主畫面應用程式（{names}），因此 Android 詢問要使用哪個主畫面，切換無法完成。我們歸回了電視自己的主畫面。請在電視上解除安裝那個應用程式，然後再次執行設定。} other {電視上安裝了其他主畫面應用程式（{names}），因此 Android 詢問要使用哪個主畫面，切換無法完成。我們歸回了電視自己的主畫面。請在電視上解除安裝它們，然後再次執行設定。}}</string>
+    <string name="stop_home_unknown_title">電視自己的主畫面已歸回</string>
+    <string name="stop_home_unknown_body">我們無法讓新主畫面在這台電視上接管，因此歸回了電視自己的主畫面。我們做的其他所有變更都予以保留。若要稍後重試，請開啟「這台電視的主畫面」，或向我們送出回報，以便我們檢視這個型號。</string>
+    <string name="stop_home_unknown_primary">問題回報</string>
+    <string name="stop_home_unknown_secondary">確定</string>
+    <string name="stop_home_user_said_no_title">電視自己的主畫面已歸回</string>
+    <string name="stop_home_user_said_no_body">已歸回。是有什麼問題，還是你只是想先看看？</string>
+    <string name="stop_home_user_said_no_primary">重試</string>
+    <string name="stop_home_user_said_no_secondary">有東西看起來不對</string>
+    <string name="stop_home_timed_out_title">電視自己的主畫面已歸回</string>
+    <string name="stop_home_timed_out_body">正在歸回電視自己的主畫面……完成。你的電視保持原樣。若要稍後重試，請開啟「這台電視的主畫面」。</string>
+    <string name="stop_home_timed_out_body_off">{count, plural, one {正在歸回電視自己的主畫面……完成。仍有 # 項處於停用狀態，主畫面保持原樣。若要稍後重試，請開啟「這台電視的主畫面」。} other {正在歸回電視自己的主畫面……完成。仍有 # 項處於停用狀態，主畫面保持原樣。若要稍後重試，請開啟「這台電視的主畫面」。}}</string>
+    <string name="stop_home_timed_out_primary">確定</string>
+    <string name="stop_home_timed_out_secondary">重試</string>
+
+    <!-- 停止：已復原 -->
+    <string name="stop_step_failed_title">我們已停止</string>
+    <string name="stop_step_failed_body">{total, plural, other {有一個步驟未成功，因此我們在停用 {done} 項（共 # 項）後停止了。沒有更改其他任何內容。}}</string>
+    <string name="stop_undone_title">我們已復原所做的變更</string>
+    <string name="stop_undone_body">你的電視保持原樣。你隨時可以再次執行設定。</string>
+    <string name="stop_undone_primary">確定</string>
+    <string name="stop_undone_secondary">顯示詳細資料</string>
+
+    <!-- S4d 停止：方案執行中連線中斷（UX 4.14） -->
+    <string name="stop_connection_lost_title">電視停止了回應</string>
+    <string name="stop_connection_lost_body">{total, plural, one {在停用 {done} 項（共 # 項）後電視停止了回應。通常幾秒內就會恢復。} other {在停用 {done} 項（共 # 項）後電視停止了回應。通常幾秒內就會恢復。}}</string>
+    <string name="stop_connection_lost_reconnecting">正在重新連線……</string>
+    <string name="stop_connection_lost_back">返回。要繼續嗎？</string>
+    <string name="stop_connection_lost_primary">繼續完成其餘部分</string>
+    <string name="stop_connection_lost_secondary">在此停止</string>
+    <string name="stop_connection_lost_tertiary">復原我們的操作</string>
+    <string name="stop_connection_lost_suspect">我們已重新開啟「{name}」，在這台電視上它似乎負責 Wi-Fi。將在沒有它的情況下繼續。</string>
+    <string name="stop_connection_lost_gone_body">電視仍未回應。請確認它已開機，並與這支手機處於同一個 Wi-Fi。</string>
+    <string name="stop_connection_lost_keep_trying">繼續嘗試</string>
+
+    <!-- S4e 程序終止後恢復（UX 4.9、4.14） -->
+    <string name="stop_resume_title">我們當時正在進行 {tv} 的設定</string>
+    <string name="stop_resume_body">{total, plural, one {已停用 {done} 項（共 # 項）；主畫面尚未更改。要繼續嗎？} other {已停用 {done} 項（共 # 項）；主畫面尚未更改。要繼續嗎？}}</string>
+    <string name="stop_resume_primary">繼續</string>
+    <string name="stop_resume_secondary">復原我們的操作</string>
+    <string name="stop_resume_tertiary">保持現狀</string>
+    <string name="stop_resume_home_title">我們已歸回電視自己的主畫面</string>
+    <string name="stop_resume_home_body">出於安全我們已歸回電視自己的主畫面。要再嘗試一次切換嗎？</string>
+    <string name="stop_resume_home_primary">再試一次切換</string>
+    <string name="stop_resume_home_secondary">保持現狀</string>
+    <string name="stop_resume_change_title">我們當時正在對 {tv} 進行變更</string>
+    <string name="stop_resume_change_body">它在完成前停止了。要繼續完成其餘部分，還是復原我們的操作？</string>
+    <string name="stop_reconnect_home_body">請重新連線到電視，以歸回它自己的主畫面。一旦 {tv} 回應，我們就會立即執行。</string>
+
+    <!-- 停止：安裝失敗（UX 4.14） -->
+    <string name="stop_install_failed_title">新主畫面無法安裝</string>
+    <string name="stop_install_failed_body">電視空間不足：剩餘 {free, plural, other {# MB}}，需要 {needed, plural, other {# MB}}。我們清除了快取並重試，仍不行。清理已完成；若要稍後嘗試主畫面，請在「設定」 > 「儲存空間」中騰出空間，然後再次執行設定。</string>
+    <string name="stop_install_failed_generic_body">電視不接受新的主畫面。清理已完成；你可以稍後再次執行設定，以再嘗試主畫面。</string>
+    <string name="stop_install_failed_primary">確定</string>
+    <string name="stop_install_failed_secondary">顯示詳細資料</string>
+
+    <!-- 停止：電視尚未恢復（UX 4.8） -->
+    <string name="stop_not_back_title">電視尚未恢復</string>
+    <string name="stop_not_back_body">如果電視卡在開機標誌上：長按電視本身（不是遙控器）上的電源鍵 10 秒，然後重新開機。如果顯示的畫面寫著「無法載入 Android 系統」，請選擇「重試」。不要選擇出廠重設；無需那樣做。</string>
+    <string name="stop_not_back_auto">電視一旦重新連上 Wi-Fi，我們就會自動重新連線並歸回電視自己的主畫面，以便你從容地決定如何處理。</string>
+    <string name="stop_not_back_primary">它已重新開機</string>
+    <string name="stop_not_back_secondary">協助我</string>
+
+    <!-- S5 完成 -->
+    <string name="done_title">你的電視已準備就緒</string>
+    <string name="done_title_kept">清理已完成</string>
+    <string name="done_title_nothing">未作任何更改</string>
+    <string name="done_body_nothing">沒有剩下可停用的內容，因此你的電視保持原樣。</string>
+    <string name="done_body_nothing_kept">我們嘗試停用的每一項都保持開啟，因此你的電視保持原樣。</string>
+    <string name="done_body_nothing_stopped">設定在任何更改之前就停止了，因此你的電視保持原樣。</string>
+    <string name="done_body_nothing_unknown">我們對這台電視上的內容沒有把握，因此它保持原樣。請「協助新增這台電視」，後續版本就能做更多。</string>
+    <string name="done_hero_cd">整潔的主畫面，帶玻璃質感的對勾</string>
+    <string name="done_body">{count, plural, =0 {新主畫面已開啟。所有內容都能還原。} one {已停用 # 項。新主畫面已開啟。所有內容都能還原。} other {已停用 # 項。新主畫面已開啟。所有內容都能還原。}}</string>
+    <string name="done_body_helper">{count, plural, =0 {Home 鍵會開啟新的主畫面。電視自己的主畫面保持開啟，因此投放繼續可用。所有內容都能還原。} one {已停用 # 項。Home 鍵會開啟新的主畫面。電視自己的主畫面保持開啟，因此投放繼續可用。所有內容都能還原。} other {已停用 # 項。Home 鍵會開啟新的主畫面。電視自己的主畫面保持開啟，因此投放繼續可用。所有內容都能還原。}}</string>
+    <string name="done_body_no_home">{count, plural, one {已停用 # 項。所有內容都能還原。} other {已停用 # 項。所有內容都能還原。}}</string>
+    <string name="done_body_home_kept">{count, plural, =0 {電視保留自己的主畫面，因此它看起來一樣。所有內容都能還原。} one {已停用 # 項。電視保留自己的主畫面，因此它看起來一樣。所有內容都能還原。} other {已停用 # 項。電視保留自己的主畫面，因此它看起來一樣。所有內容都能還原。}}</string>
+    <string name="done_body_partial">{total, plural, other {已停用 {done} 項（共 # 項）；主畫面未更改。所有內容都能還原。}}</string>
+    <string name="done_body_partial_home_on">{total, plural, other {已停用 {done} 項（共 # 項）。新主畫面已開啟。所有內容都能還原。}}</string>
+    <string name="done_home_kept_timed_out">電視自己的主畫面已歸回：電視上的檢查逾時。若要稍後重試，請開啟「這台電視的主畫面」。</string>
+    <string name="done_home_kept_said_no">電視自己的主畫面已歸回：你說新的那個看起來不對。若要稍後重試，請開啟「這台電視的主畫面」。</string>
+    <string name="done_home_kept">電視自己的主畫面已歸回：新的那個未能接管。若要稍後重試，請開啟「這台電視的主畫面」。</string>
+    <string name="done_look_failed">你的外觀未能傳送到電視。請從「主畫面」重新發送。</string>
+    <string name="done_restore_saved">已在本手機儲存還原點（{date}）</string>
+    <string name="done_restore_earlier">本手機上的還原點（來自 {date}）</string>
+    <string name="done_debug_note">當你點按「完成」時，電視上的偵錯會關閉。下次請用遙控器重新開啟它。</string>
+    <string name="done_debug_kept">按照你的選擇，電視上的偵錯保持開啟</string>
+    <string name="done_skipped">{name} 無法停用；它無害。</string>
+    <string name="kept_tv_input">{name}。保留：它負責電視的 HDMI 和調諧器輸入。</string>
+    <string name="done_skipped_many">{count, plural, one {有 # 項無法停用；它無害。} other {有 # 項無法停用；它們無害。}}</string>
+    <string name="done_mibox_usb">你的 USB 埠已重新供電。</string>
+    <string name="done_add_card_title">將卡片新增到主畫面</string>
+    <string name="done_add_card_body">選用。你可以稍後在「卡片和模組」下新增卡片。</string>
+    <string name="done_note_title">為家人儲存一份還原備註</string>
+    <string name="done_finish">完成</string>
+    <string name="done_finishing">正在關閉偵錯……</string>
+    <string name="done_finished">正在關閉偵錯……完成。</string>
+
+    <!-- S5 重新開機卡片與流程（D24、UX 4.8） -->
+    <string name="restart_card_title">重新啟動電視以確認一切生效</string>
+    <string name="restart_card_recommended">2 分鐘，建議操作</string>
+    <string name="restart_card_optional">選用</string>
+    <string name="restart_button">重新啟動</string>
+    <string name="restart_getting_ready">{seconds, plural, other {正在準備…… # 秒}}</string>
+    <string name="restart_intro">正在重新啟動電視。通常需要約一分鐘。我們會留意它。</string>
+    <string name="restart_progress_off">電視關閉……</string>
+    <string name="restart_progress_starting">正在啟動……</string>
+    <string name="restart_progress_found">在 {time} 找到了它……</string>
+    <string name="restart_progress_home">主畫面是新的那個。</string>
+    <string name="restart_progress_home_helper">Home 鍵會開啟新的主畫面。</string>
+    <string name="restart_progress_home_own">主畫面是電視自己的，一如往常。</string>
+    <string name="restart_progress_good">一切正常。</string>
+    <string name="restart_progress_held">新的主畫面在重新開機後仍然生效。</string>
+    <string name="restart_progress_failed">重新開機後電視自己的主畫面回來了。</string>
+    <string name="done_tell_us">告訴我們它成功了</string>
+    <string name="done_tell_us_note">這對這個電視型號有意義。你會先看到要發送的內容，在你於 GitHub 發布之前不會發送任何東西。</string>
+    <string name="done_restart_report_note">請告訴我們，以便我們檢視這個電視型號。回報會說明應用程式統計到的情況。</string>
+    <string name="done_tv_now_title">這是你現在的電視</string>
+    <string name="done_tv_now_cd">電視現在顯示的內容</string>
+    <string name="done_tv_now_again">不對？重新發送</string>
+    <string name="restart_came_back">{count, plural, one {重新開機後有 # 項重新開啟；已再次停用。} other {重新開機後有 # 項重新開啟；已再次停用。}}</string>
+    <string name="restart_slow">耗時比平常久。有些電視重新加入 Wi-Fi 較慢。如果電視只顯示開機標誌而無其他內容，請再等兩分鐘。</string>
+
+    <!-- 停止與復原先詢問（Confirmations）：一個問題、一句平靜的話、一個動詞和一條退路 -->
+    <string name="confirm_stop_title">現在停止嗎？</string>
+    <string name="confirm_stop_body">我們在此停止，並歸回我們迄今所做的更改。你的電視保持安全。</string>
+    <string name="confirm_stop_button">停止並復原</string>
+    <string name="confirm_keep_going">繼續</string>
+    <string name="confirm_stop_here_title">在此停止嗎？</string>
+    <string name="confirm_stop_here_body">我們保留已完成的變更，不再更改其他任何內容。你的電視保持安全。</string>
+    <string name="confirm_stop_here_button">在此停止</string>
+    <string name="confirm_undo_title">復原電視上的變更嗎？</string>
+    <string name="confirm_undo_body">我們歸回這次更改所做的全部操作，讓電視回到之前的狀態。不會刪除任何內容。</string>
+    <string name="confirm_undo_button">復原變更</string>
+    <!-- 測試版：當這台電視的清單是候選（依回報產生、尚未經測試）時，在方案前的卡片。 -->
+    <string name="candidate_overline">測試版</string>
+    <string name="candidate_title">這台電視的清單是新的</string>
+    <string name="candidate_body">我們依同型號電視的回報為這台電視製作了一份清單，但還沒有任何人測試過。它會停用哪些內容照常列在方案中，你可以透過「還原點」歸回所有內容。</string>
+    <string name="candidate_ask_issue">如果你嘗試，請在幾天後到 issue {issue} 告訴我們情況如何：</string>
+    <string name="candidate_ask">如果你嘗試，請在幾天後透過「問題回報」告訴我們情況如何：</string>
+    <string name="candidate_check_wifi">重新開機後的 Wi-Fi</string>
+    <string name="candidate_check_remote">遙控器上的每個按鈕，包括輸入和語音</string>
+    <string name="candidate_check_hdmi">每個 HDMI 輸入</string>
+    <string name="candidate_check_live_tv">電視直播</string>
+    <string name="candidate_check_casting">從手機投放</string>
+    <string name="candidate_try">試用測試清單</string>
+    <string name="candidate_careful">保持謹慎，如同 0.3.4</string>
+    <string name="candidate_careful_note">謹慎意味著只處理我們對該品牌電視有把握的內容，與 0.3.4 版本相同。</string>
+    <!-- RFC-HELPER-1（測試版）：自訂開關「Home 鍵輔助」及其同意（PLAN 4.2）。 -->
+    <string name="helper_group">Home 鍵</string>
+    <string name="helper_row">Home 鍵輔助</string>
+    <string name="helper_row_note">電視自己的主畫面保持開啟；Home 鍵會開啟新的那個</string>
+    <string name="helper_row_on">開啟：Home 鍵會開啟新的主畫面，而電視自己的保持開啟</string>
+    <string name="helper_consent_title">Home 鍵輔助</string>
+    <string name="helper_consent_keep">電視自己的主畫面保持開啟；Home 鍵會開啟新的那個。它的設定精靈也保持開啟，因此投放和你的 Wi-Fi 都不受影響。新主畫面內有一個小輔助程式會留意電視的主畫面，並改為開啟新的那個。</string>
+    <string name="helper_consent_sees">該輔助程式是一項 Android 無障礙服務。Android 會提示它可以檢視你的螢幕和你按下的按鈕。這個輔助程式只向 Android 詢問目前開啟了哪個應用程式，不詢問螢幕上的內容，也不詢問你的按鍵。它沒有網路存取權。它是 Gathin 開發的開放原始碼主畫面（github.com/Gathin23/cleanyourtv）的一部分，也就是本應用程式所安裝的同一應用程式。</string>
+    <string name="helper_consent_changes">會有的變化：你可能會先短暫看到電視自己的主畫面，然後才看到新的那個。如果電視或某個清理程式強制停止主畫面，該輔助程式會關閉，直到你在此重新開啟它。</string>
+    <string name="helper_consent_off">你可以隨時關閉它：在此處、透過「復原」，或在電視的「設定」 &gt; 「無障礙」 &gt; 「Home 鍵」中。</string>
+    <string name="helper_consent_yes">開啟輔助程式</string>
+    <string name="helper_consent_no">稍後再說</string>
+</resources>

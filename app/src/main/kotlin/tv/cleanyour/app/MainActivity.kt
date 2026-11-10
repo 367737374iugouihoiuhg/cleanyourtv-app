@@ -1,5 +1,6 @@
 package tv.cleanyour.app
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -23,6 +24,13 @@ import tv.cleanyour.ui.design.theme.CytTheme
 // opens the destination decided from disk.
 class MainActivity : ComponentActivity() {
     private val graph get() = (application as CytApplication).graph
+
+    // The app's own language, if set, is applied here: MainActivity is a plain ComponentActivity
+    // (no AppCompat), so wrapping the base context with the chosen locale is what makes the whole Compose
+    // tree read its strings from that language. AUTO leaves the phone's own language in place.
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocalePrefs.wrap(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Always dark (D-W8-27): light icons on transparent bars whatever the phone's own mode.

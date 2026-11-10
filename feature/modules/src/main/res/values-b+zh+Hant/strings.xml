@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clean Your TV, :feature:modules。繁體中文（Hant，台／港用語）字串。
+  與英文來源檔的 <string name> 集合、數量、順序一一對應。帶參數的字串使用 ICU MessageFormat
+  命名參數（大括號），由應用的訊息助手（android.icu.text.MessageFormat）格式化；無 printf 佔位符。
+  計數透過 plural 選擇器處理。不翻譯產品名、發布者代稱、索引文字、URL、GitHub、F-Droid、Wi-Fi、Android、Google TV。
+  介面：M3、M3a、M3b、M3c、更新時重新同意，以及索引與下載失敗的提示行。
+-->
+<resources>
+
+    <!-- 共用按鈕文字 -->
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">確定</string>
+    <string name="action_done">完成</string>
+    <string name="action_undo">復原</string>
+
+    <!-- 憑證提示（D17），由「新增到 {tv}」觸發 -->
+    <string name="gate_title">確認是你的操作</string>
+    <string name="gate_subtitle">在我們對 {tv} 做任何改動之前</string>
+    <string name="gate_negative">取消</string>
+    <string name="gate_failed">我們無法確認是你的操作，所以沒有做任何改動。</string>
+
+    <!-- M3 卡片與模組 -->
+    <string name="modules_title">卡片與模組</string>
+    <string name="modules_state_shown">已顯示</string>
+    <string name="modules_state_hidden">已隱藏</string>
+    <string name="modules_state_over_limit">超出上限</string>
+    <string name="modules_over_limit_note">主畫面最多顯示八張卡片。</string>
+    <string name="modules_remove">從電視移除</string>
+    <string name="modules_show_card">顯示它的卡片</string>
+    <string name="modules_cards_off_note">這台電視的主畫面上卡片已關閉。顯示一張後，電視會請你確認。</string>
+    <string name="modules_update">更新</string>
+    <string name="modules_add">新增</string>
+    <string name="modules_update_available">{version} 可用</string>
+    <string name="modules_empty">還沒有卡片。新增一張，把它放到主畫面上。</string>
+    <string name="modules_normal_app_note">在這台電視上，它會以一般應用程式的形式出現</string>
+    <string name="modules_remove_title">要從 {tv} 移除 {name} 嗎？</string>
+    <string name="modules_remove_body">這會把該應用程式從電視上移除。你的主畫面和其他卡片維持原樣。</string>
+    <string name="modules_remove_confirm">移除</string>
+    <string name="modules_removed">已移除 {name}。</string>
+    <string name="modules_state_cd">{name}：{state}</string>
+
+    <!-- 更新時重新同意（UX 5.4） -->
+    <string name="modules_update_consent">{name} {version} 現在還想：{permissions}。允許這個版本嗎？</string>
+    <string name="modules_update_skip">跳過這個版本</string>
+
+    <!-- M3a 新增到 {tv} -->
+    <string name="addmodule_title">新增到 {tv}</string>
+    <string name="addmodule_search_hint">搜尋</string>
+    <string name="addmodule_search_cd">搜尋模組</string>
+    <string name="addmodule_open_source">開放原始碼</string>
+    <string name="addmodule_size">{size, plural, other {# MB}}</string>
+    <string name="addmodule_tier_community">社群</string>
+    <string name="addmodule_tier_verified">已驗證</string>
+    <string name="addmodule_tier_paused">已暫停</string>
+    <string name="addmodule_loading">正在載入清單……</string>
+    <string name="addmodule_empty">沒有與你的搜尋相符的模組。</string>
+    <string name="addmodule_refresh">重新整理</string>
+    <string name="addmodule_footer">所有模組都由社群成員製作，並經過自動核對。</string>
+    <string name="addmodule_footer_link">每一個是誰做的</string>
+    <string name="addmodule_tiers_title">每一個是誰做的</string>
+    <string name="addmodule_tiers_community">社群：由本應用程式之外的人製作，並對照發布者公布的內容自動核對。</string>
+    <string name="addmodule_tiers_verified">已驗證：有具名的人審閱過該版本。</string>
+    <string name="addmodule_tiers_paused">已暫停：維護者暫時停止提供它。</string>
+
+    <!-- M3b 模組詳細資料 -->
+    <string name="module_what_title">它能在電視上做什麼</string>
+    <string name="module_who_title">製作人</string>
+    <string name="module_runs_background">在背景執行：{reason}</string>
+    <string name="module_no_background">無背景服務</string>
+    <string name="module_perm_can_cd">{statement}。它能做到這一點。</string>
+    <string name="module_perm_cannot_cd">{statement}。它不會這樣做。</string>
+    <string name="module_maker">{handle}（在 GitHub 上）</string>
+    <string name="module_version_line">版本 {version}，發布於 {date}</string>
+    <string name="module_checks">{count, plural, =0 {已自動核對：檔案與發布者公布的一致，且不申請任何權限。} one {已自動核對：檔案與發布者公布的一致，且只申請上面列出的 # 項權限，別無其他。} other {已自動核對：檔案與發布者公布的一致，且只申請上面列出的 # 項權限，別無其他。}}</string>
+    <string name="module_not_reviewed">已自動核對。尚未經過人工審閱。</string>
+    <string name="module_key_line">金鑰 {key}，與電視上的一致</string>
+    <string name="module_source">原始碼</string>
+    <string name="module_report">回報問題</string>
+    <string name="module_hero_badge">它在你的電視上的卡片</string>
+    <string name="module_add">新增到 {tv}</string>
+    <!-- 首次下載附加元件之前顯示（F-Droid 收錄政策，安全項 5）。 -->
+    <string name="module_outside_store">附加元件從發布者的 GitHub 版本頁下載，不在任何應用程式商店內，也不是由 F-Droid 建置或核對的。</string>
+    <string name="module_add_turns_cards_on">新增它會讓這台電視的主畫面開啟卡片；卡片顯示前，電視會先詢問。</string>
+    <string name="module_paused_reason">維護者已暫停：{reason}</string>
+    <string name="module_install_adding">正在新增 {name}……</string>
+    <string name="module_install_downloading">{size, plural, other {正在下載（# MB）……}}</string>
+    <string name="module_install_checking">正在核對它與發布者的副本是否一致……</string>
+    <string name="module_install_installing">正在安裝到電視……</string>
+    <string name="module_install_asking">正在請電視顯示詢問……</string>
+    <string name="module_install_failed">{name} 無法安裝到電視。沒有對其他東西做改動。</string>
+
+    <!-- M3c 請看電視（卡片提示，D1 和 D45） -->
+    <string name="cardprompt_title">請看電視</string>
+    <string name="cardprompt_art_keep">保持隱藏</string>
+    <string name="cardprompt_art_cd">電視在詢問：{name} 想在你的主畫面放一張卡片。金鑰 {key}。選項是「保持隱藏」和「顯示卡片」。</string>
+    <string name="cardprompt_body">電視會向你再次確認，這樣任何應用程式都不能不聲不響地把自己放到主畫面上。</string>
+    <string name="cardprompt_instruction">用遙控器選擇「顯示卡片」。電視上顯示的金鑰應為 {key}，與這裡一致。</string>
+    <string name="cardprompt_waiting">正在等待你在電視上作答……</string>
+    <string name="cardprompt_later">稍後再說：長按電視「設定」裡的膠囊按鈕，即可找到「模組卡片」。</string>
+    <string name="cardprompt_shown">{name} 已出現在主畫面上。</string>
+    <string name="cardprompt_hidden">{name} 已安裝並隱藏。它仍會以一個一般應用程式出現。你隨時可以在「卡片與模組」裡顯示這張卡片。</string>
+    <string name="cardprompt_signer_changed">{name} 的新版本用了與之前不同的金鑰簽名。這很不尋常；電視會刻意再問一次。如果你沒料到會有更新，請選擇「保持隱藏」。</string>
+
+    <!-- 模組清單（索引）失敗。語氣平和，從不責怪使用者。 -->
+    <string name="index_failure_bad_signature">我們無法確認模組清單是真實的，所以沒有使用它。電視上沒有任何改動。</string>
+    <string name="index_failure_unknown_key">模組清單使用的金鑰我們不認識，所以沒有使用它。電視上沒有任何改動。</string>
+    <string name="index_failure_revoked_key">模組清單使用的金鑰已被撤銷，所以沒有使用它。電視上沒有任何改動。</string>
+    <string name="index_failure_bad_keys_file">受信任金鑰清單沒有通過我們的核對，所以沒有使用模組清單。電視上沒有任何改動。</string>
+    <string name="index_failure_expired">模組清單已過期。請連上網路並重新整理它。</string>
+    <string name="index_failure_rollback">我們收到的模組清單比已有的還舊，所以我們保留了較新的那一份。</string>
+    <string name="index_failure_malformed">我們無法讀取模組清單。請稍候片刻後再試。</string>
+    <string name="index_stale_warning">模組清單可能已過期；連網時請重新整理</string>
+
+    <!-- 下載失敗 -->
+    <string name="fetch_failure_offline">這支手機現在沒有網路連線。請連上網路後重試。</string>
+    <string name="fetch_failure_host_not_allowed">該下載並非來自我們使用的位址，所以我們停止了。沒有安裝任何東西。</string>
+    <string name="fetch_failure_http_error">下載站台回報了錯誤（{code}）。請稍候片刻後再試。</string>
+    <string name="fetch_failure_too_large">該下載比預期的大，所以我們停止了。沒有安裝任何東西。</string>
+    <string name="fetch_failure_hash_mismatch">該下載與發布者的副本不一致，所以我們沒有安裝。</string>
+    <string name="fetch_failure_size_mismatch">該下載的大小與清單中所述不符，所以我們停止了。沒有安裝任何東西。</string>
+    <string name="fetch_failure_signer_mismatch">該應用程式的簽名者不是清單中的發布者，所以我們沒有安裝。</string>
+    <string name="fetch_failure_try_again">重試</string>
+
+</resources>

@@ -360,9 +360,12 @@ fun AppRoot(graph: AppGraph, start: Dest, onExit: () -> Unit) {
                     val state by m.state.collectAsStateWithLifecycle()
                     LaunchedEffect(m) { m.effects.collect { onManageEffect(it) } }
                     SecureWindow(state.confirm == AppConfirm.RESET_KEY)
+                    val language = remember { LocalePrefs.get(context) }
                     AppSettingsScreen(state, m::dispatch, onBack = { go("back") },
                         onOpenRelease = { graph.store.releasePage?.let { url -> scope.launch { onManageEffect(ManageEffect.OpenUrl(url)) } } },
-                        details = details, onDetails = { collectDetails(it) })
+                        details = details, onDetails = { collectDetails(it) },
+                        language = language,
+                        onLanguageChange = { tag -> LocalePrefs.set(context, tag); context.findActivity()?.recreate() })
                 }
             },
         )

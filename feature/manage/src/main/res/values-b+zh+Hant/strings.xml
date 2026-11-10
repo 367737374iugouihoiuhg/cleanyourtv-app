@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clean Your TV, :feature:manage. 繁體中文介面文案。
+  帶參數的字串使用 ICU MessageFormat，參數以命名大括號表示，
+  由應用的訊息助手（android.icu.text.MessageFormat）格式化。無 printf 佔位元，
+  無 Android plurals 元素。計數透過複數選擇器處理。
+  介面：M1、M1a、M4、M5、M7、M8，以及從這些介面發起操作時的憑證確認。
+-->
+<resources>
+
+    <!-- 通用按鈕文字 -->
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">確定</string>
+    <string name="action_done">完成</string>
+    <string name="action_undo">復原</string>
+
+    <!-- 憑證確認（D17） -->
+    <string name="gate_title">確認是你本人</string>
+    <string name="gate_subtitle">在我們變更 {tv} 上的任何內容之前</string>
+    <string name="gate_subtitle_reset_key">在我們重設這支手機的金鑰之前</string>
+    <string name="gate_subtitle_delete_all">在我們刪除所有內容之前</string>
+    <string name="gate_negative">取消</string>
+    <string name="gate_failed">我們無法確認是你本人，因此未做任何變更。</string>
+
+    <!-- M1 管理 -->
+    <string name="manage_title" translatable="false">Clean Your TV</string>
+    <string name="manage_settings_cd">應用程式設定</string>
+    <string name="manage_tv_title">{tv}，{room}</string>
+    <string name="manage_tv_title_noroom">{tv}</string>
+    <string name="manage_state_clean">已清理</string>
+    <string name="manage_state_original">原始狀態</string>
+    <string name="manage_checked">已檢查 {date}</string>
+    <string name="manage_tv_card_cd">{tv}。{state}。{checked}</string>
+    <string name="manage_thumbnail_cd">{tv} 的最新一張畫面。輕觸即可重新整理。</string>
+    <!-- 0.4.7（UX finding 20，PM 11）：回到設定精靈的單一名稱，對每台電視都顯示 -->
+    <string name="manage_clean_again">重新執行設定</string>
+    <string name="manage_level_simple">簡單</string>
+    <string name="manage_level_custom">自訂</string>
+    <string name="manage_level_simple_note">關閉常見的雜亂內容，其餘全部保留。</string>
+    <string name="manage_level_custom_note">讓你自行逐項選擇。</string>
+    <string name="manage_row_home">主畫面</string>
+    <string name="manage_row_home_own">電視保留自己的。查看原因</string>
+    <!-- 0.4.7（UX finding 8）：新的主畫面已安裝但未在使用 -->
+    <string name="manage_row_home_not_in_use">正在使用電視自带的主畫面</string>
+    <!-- 0.4.7（StockHomeBack）：此時「重新執行設定」為主要按鈕 -->
+    <!-- RFC-HELPER-1（測試版）：主畫面按鈕助手已開啟 -->
+    <string name="manage_row_home_helper">主畫面按鈕會開啟它。电视自带的仍保留。</string>
+    <string name="manage_row_home_stock_back">電視重新啟用了它自带的主畫面。</string>
+    <string name="manage_row_cards">卡片和模組</string>
+    <!-- 0.4.7（UX finding 9）：卡片以應用程式安裝，而電視保留自己的主畫面 -->
+    <string name="manage_row_cards_own_home">以應用程式顯示：這台電視保留自己的主畫面</string>
+    <string name="manage_row_cards_none">尚無卡片</string>
+    <string name="manage_row_switched_off">{count, plural, other {已關閉 (#)}}</string>
+    <string name="manage_row_switched_off_sub">把其中任何一個還原</string>
+    <string name="manage_row_better_back_on">{count, plural, one {重新開啟 # 個應用程式較好} other {重新開啟 # 個應用程式較好}}</string>
+    <string name="manage_row_leftovers">檢查殘留項</string>
+    <string name="manage_row_leftovers_sub">在電視軟體更新之後</string>
+    <string name="manage_row_restore">還原點</string>
+    <string name="manage_row_restore_sub">{date}。從這裡復原所有變更。</string>
+    <string name="manage_row_tvsettings">電視設定</string>
+    <string name="manage_add_tv">+ 設定另一台電視</string>
+    <string name="manage_offline_banner">與電視失去連線。它是否仍開著？</string>
+    <string name="manage_reconnect">重新連線</string>
+    <string name="manage_reconnecting">正在重新連線…</string>
+    <!-- 0.4.8：在電視重開期間應用統計到的內容（重開），以及只需一次輕觸即可告訴我們 -->
+    <string name="manage_restarts_held">{count, plural, one {歷經 # 次重開仍維持} other {歷經 # 次重開仍維持}}</string>
+    <string name="manage_restarts_ask">這是針對此電視型號的統計。你會看到先處理哪些。</string>
+    <string name="manage_restarts_told">你在 {date} 告訴了我們。謝謝你。</string>
+    <string name="manage_restarts_tell">告訴我們它有效</string>
+    <string name="manage_restarts_tell_again">再次告訴我們</string>
+    <string name="manage_restart_failed">重開後電視自带的主畫面又回來了。</string>
+    <string name="manage_restart_failed_body">告訴我們，以便我們研究這個電視型號。</string>
+    <string name="manage_restart_report">回報問題</string>
+
+    <!-- M1a 再次寫入時的偵錯步驟（UX 4.3，返回） -->
+    <string name="debugstep_title">要變更電視上的內容，需要暫時開啟偵錯。</string>
+    <string name="debugstep_body">在電視上：設定 > 裝置偏好設定 > 開發人員選項 > USB 偵錯。後續步驟由我們處理，完成後會自動關閉。</string>
+    <string name="debugstep_note">你無需再按建立。開發人員選項將保持解鎖。</string>
+    <string name="debugstep_waiting">正在等待電視…</string>
+    <string name="debugstep_connecting">正在連線…</string>
+    <!-- RFC-REACH-1：偵錯步驟說明目前是哪種情況，以及應用看到什麼 -->
+    <string name="debugstep_off_why">它處於關閉狀態，因為上次完成時我們按计划把它關閉了。</string>
+    <string name="debugstep_nowifi_title">你的手機未連線 Wi-Fi</string>
+    <string name="debugstep_nowifi_body">請加入與電視相同的 Wi-Fi。之後由我們自行繼續。</string>
+    <string name="debugstep_allow_title">查看電視並允許這支手機</string>
+    <string name="debugstep_allow_body">電視正在詢問「允許 USB 偵錯嗎？」。勾選「一律允許」，然後選擇允許（某些電視上是確定）。</string>
+    <string name="debugstep_allow_code">電視上的程式碼以 {tail} 結尾。這就是這支手機。</string>
+    <string name="debugstep_allow_waiting">正在等待你在電視上輕觸…</string>
+    <string name="debugstep_details_show">顯示詳細資訊</string>
+    <string name="debugstep_details_hide">隱藏詳細資訊</string>
+    <string name="debugstep_sees">應用看到的內容</string>
+    <string name="debugstep_row_wifi">手機已連線 Wi-Fi</string>
+    <string name="debugstep_row_wifi_no">請加入與電視相同的 Wi-Fi。</string>
+    <string name="debugstep_row_network">與設定這台電視時相同的網路</string>
+    <string name="debugstep_row_network_no">自設定以來你的網路已改變。我們正在這個網路上尋找電視。</string>
+    <string name="debugstep_row_saved">電視在其已儲存的位址上回應</string>
+    <string name="debugstep_row_saved_no">請在電視上開啟 USB 偵錯。如果已開啟，電視可能有了新位址。</string>
+    <string name="debugstep_row_found">在此網路的另一個位址上找到了電視</string>
+    <string name="debugstep_row_found_no">這個 Wi-Fi 上還沒有裝置以這台電視的身分回應。我們會繼續尋找。</string>
+    <string name="debugstep_row_allow">電視正在等待你允許這支手機</string>
+    <string name="debugstep_row_allow_yes">查看電視：勾選「一律允許」，然後選擇允許。</string>
+    <string name="debugstep_yes">是</string>
+    <string name="debugstep_no">否</string>
+    <string name="debugstep_checking">正在檢查…</string>
+    <string name="debugstep_unknown">無法判斷</string>
+    <string name="debugstep_stuck">還是沒有？有些電視重開後才會開啟 Wi-Fi 偵錯埠，所以請重開電視一次。有些電視除 USB 偵錯外，還需開啟「網路偵錯」或「無線偵錯」。電視也可能有了新位址：它在電視上的 設定 > 網路 中顯示。</string>
+    <string name="debugstep_report">回報問題</string>
+    <string name="debugstep_address">輸入電視的位址</string>
+    <string name="debugstep_row_typed">電視在你輸入的位址上回應</string>
+    <string name="debugstep_row_typed_no">請在電視的 設定 > 網路 中核對位址。那裡的 USB 偵錯也必須開啟。</string>
+    <string name="details_copy">複製連線詳細資料</string>
+    <string name="details_share">分享</string>
+    <string name="details_collecting">正在查看你的 Wi-Fi 和各台電視…</string>
+    <string name="details_copied">已複製。請貼上到訊息或問題單中。</string>
+    <string name="details_title">連線詳細資料</string>
+    <string name="details_body">我們大約查看你的 Wi-Fi 和每台已儲存的電視 10 秒，然後複製所看到的內容。其中包含你給電視起的名稱，但絕不會包含 Wi-Fi 名稱、完整位址、序號或金鑰。</string>
+    <string name="appsettings_details">連線詳細資料</string>
+    <string name="appsettings_details_note">應用看到的關於你的 Wi-Fi 和電視的資訊，用於复制或分享</string>
+
+    <!-- 一次已暫停且保留了未完成作業的管理寫入（R5-W8 O2） -->
+    <string name="openwrite_title">在 {tv} 上的一項變更未完成</string>
+    <string name="openwrite_body_lost">電視在過程中停止回應。請繼續完成其餘部分，或復原我們已做的操作。在此之前這台電視不能再進行其他變更。</string>
+    <string name="openwrite_body">我們在過程中停止了。請繼續完成其餘部分，或復原我們已做的操作。在此之前這台電視不能再進行其他變更。</string>
+    <string name="openwrite_body_setup">{tv} 的設定未完成。請開啟它以繼續完成或復原我們已做的操作。</string>
+    <string name="openwrite_not_taken">電視沒有回應。請確認它已開機並與這支手機在同一 Wi-Fi 上，然後重試。</string>
+    <string name="openwrite_busy">正在處理…</string>
+    <string name="openwrite_carry_on">繼續</string>
+    <string name="openwrite_title_stale">自上次讀取以來 {tv} 已改變</string>
+    <string name="openwrite_body_stale_nothing">我們讀取之後電視上的內容有變，因此在做出任何變更前停止了。未做任何變更。請重新檢查電視，我們會從它當前的狀態開始。</string>
+    <string name="openwrite_body_stale">我們讀取之後電視上的內容有變，因此在過程中停止了。請重新檢查電視以便從它當前的狀態繼續，或復原我們已做的操作。</string>
+    <string name="openwrite_check_again">重新檢查</string>
+    <string name="openwrite_undo">復原我們已做的操作</string>
+    <string name="openwrite_stop">在此停止</string>
+    <string name="openwrite_open_setup">開啟設定</string>
+    <string name="openwrite_later">稍後</string>
+    <string name="openwrite_report">回報問題</string>
+    <string name="openwrite_title_took_home">{app} 接管了主畫面按鈕</string>
+    <string name="openwrite_body_took_home">{app} 恢復開啟後，電視把主畫面按鈕交給了它，因此按主畫面不再開啟新的主畫面。請重新關閉 {app} 以恢復新的主畫面，或保留目前狀態。</string>
+    <string name="openwrite_switch_off_again">再次關閉它</string>
+    <string name="openwrite_keep_it">保留</string>
+    <!-- 0.4.7（UX finding 19）：一次已暫停的外觀下發未抵達電視 -->
+    <string name="openwrite_title_look">你的外觀未能送達 {tv}</string>
+    <string name="openwrite_body_look">沒有其他內容被變更。請重新發送，或復原以保留電視原本的外觀。在此之前這台電視不能再進行其他變更。</string>
+    <string name="openwrite_send_again">重新發送</string>
+
+    <!-- M4 已關閉 -->
+    <string name="switchedoff_title">{count, plural, other {已關閉 (#)}}</string>
+    <string name="switchedoff_intro">每一項都可以還原。沒有刪除任何內容；「關閉」表示睡眠。</string>
+    <string name="switchedoff_group_ads">廣告和贊助列</string>
+    <string name="switchedoff_group_tracking">追蹤和分析</string>
+    <string name="switchedoff_group_nobody">無人要求安裝的應用程式</string>
+    <string name="switchedoff_group_brand">{brand} 附加內容</string>
+    <string name="switchedoff_group_shop">商店和示範模式</string>
+    <string name="switchedoff_group_needed">新主畫面所需</string>
+    <string name="switchedoff_group_other">在自訂中所選</string>
+    <string name="switchedoff_put_back">還原</string>
+    <string name="switchedoff_put_back_cd">還原 {name}</string>
+    <string name="switchedoff_group_better">還原開啟較好</string>
+    <string name="switchedoff_better_kept">這台電視的清單現在會保持它開啟。</string>
+    <string name="switchedoff_switch_back_on">重新開啟</string>
+    <string name="switchedoff_switch_back_on_cd">重新開啟 {name}</string>
+    <string name="switchedoff_snackbar">{name} 已恢復開啟。</string>
+    <string name="switchedoff_empty">目前沒有關閉任何內容。</string>
+    <string name="switchedoff_empty_sub">電視上的一切均處於開啟狀態。</string>
+
+    <!-- M5 檢查殘留項 -->
+    <string name="leftovers_title">檢查殘留項</string>
+    <string name="leftovers_checking">正在檢查…</string>
+    <string name="leftovers_found">{count, plural, one {更新後有 # 項又回來了。要再次關閉它嗎？} other {更新後有 # 項又回來了。要再次關閉它們嗎？}}</string>
+    <string name="leftovers_switch_off">關閉</string>
+    <string name="leftovers_not_now">暫時不用</string>
+    <string name="leftovers_none">沒有任何項回來。一切都和你離開時一樣。</string>
+    <string name="leftovers_done">已再次關閉。</string>
+    <string name="leftovers_error">我們剛才無法檢查。電視是否仍開著？</string>
+    <string name="leftovers_notice">{count, plural, one {電視上有 # 項又回來了。} other {電視上有 # 項又回來了。}}</string>
+    <string name="leftovers_notice_action">檢查</string>
+
+    <!-- M7 電視設定 -->
+    <string name="tvsettings_title">電視設定</string>
+    <string name="tvsettings_name_room">名稱和房間</string>
+    <string name="tvsettings_name_label">名稱</string>
+    <string name="tvsettings_room_label">房間</string>
+    <string name="tvsettings_level_label">層級</string>
+    <string name="tvsettings_level_simple">簡單</string>
+    <string name="tvsettings_level_custom">自訂</string>
+    <string name="tvsettings_level_note">返回簡單會隱藏額外選項。你的電視維持現狀不變。</string>
+    <string name="tvsettings_address">位址</string>
+    <string name="tvsettings_last_seen">最近上線 {date}</string>
+    <string name="tvsettings_forget">忘記這台電視</string>
+    <string name="tvsettings_forget_explain">這會從這支手機刪除這台電視的記錄、日誌和還原點。電視本身不會變更，但之後你將無法從這支手機復原。</string>
+    <string name="tvsettings_forget_title">忘記 {tv}？</string>
+    <string name="tvsettings_forget_confirm">忘記這台電視</string>
+    <string name="tvsettings_forget_busy">設定仍在這台電視上執行。請等待它完成，或先停止它。</string>
+
+    <!-- M8 應用程式設定 -->
+    <string name="appsettings_title">應用程式設定</string>
+    <string name="appsettings_large_text">大字體跟隨系統</string>
+    <string name="appsettings_large_text_note">文字大小跟隨你手機設定中所設的大小。</string>
+    <string name="appsettings_haptics">觸覺回饋</string>
+    <string name="appsettings_haptics_note">當某事完成或需要你時給出輕微震動。</string>
+    <string name="appsettings_language">語言</string>
+    <string name="appsettings_language_note">選擇應用顯示的語言。English、简体中文 和 繁體中文 各自保留自己的名稱。</string>
+    <string name="appsettings_language_auto">跟隨系統</string>
+    <string name="appsettings_about">關於</string>
+    <string name="appsettings_version">版本 {version}</string>
+    <string name="appsettings_launcher_pin_label">內建主畫面應用程式</string>
+    <string name="appsettings_launcher_pin_line" translatable="false">{package} {version} · sha256 {digest}</string>
+    <string name="appsettings_key_label">手機金鑰</string>
+    <string name="appsettings_key_strongbox">儲存在專用的安全晶片內（StrongBox）。</string>
+    <string name="appsettings_key_tee">儲存在手機的安全硬體內（TEE）。</string>
+    <string name="appsettings_key_wrapped">儲存在軟體中，並用來自手機安全儲存的金鑰封裝。這支手機無法將它儲存在硬體中。</string>
+    <string name="appsettings_check_updates">檢查更新</string>
+    <string name="appsettings_checking">正在檢查…</string>
+    <string name="appsettings_update_available">{version} 可更新</string>
+    <string name="appsettings_update_open">開啟發布頁面</string>
+    <string name="appsettings_up_to_date">你已使用最新版本</string>
+    <string name="appsettings_update_error">無法檢查更新</string>
+    <string name="appsettings_licences">授權</string>
+    <string name="appsettings_licence_app">Clean Your TV：MIT</string>
+    <string name="appsettings_licence_font">Outfit 字型：SIL 開放字型授權 1.1</string>
+    <string name="appsettings_licence_apache">我們改採的 dadb 和 Shizuku 程式碼：Apache-2.0 聲明</string>
+    <string name="appsettings_licence_pictures">外觀圖片：我們的原創作品，CC0 1.0（公有領域）；Aurora、Glass 和 Autumn lake (Ruska) 取自 Clean Your TV 啟動器，MIT</string>
+    <string name="appsettings_licence_bouncycastle">Bouncy Castle 加密程式庫：Bouncy Castle 授權</string>
+    <string name="appsettings_privacy">隱私</string>
+    <string name="appsettings_privacy_text">除了從 github.com 的下載，沒有任何內容離開你的網路。GitHub 會看到手機的位址和一個通用的使用者代理。只有當你自己複製、分享或發布時，回報才會離開手機。</string>
+    <string name="appsettings_privacy_text_offline">沒有任何內容離開你的網路。應用只與你所選的電視通訊，本身不發出任何網際網路請求。只有當你自己複製、分享或發布時，回報才會離開手機。</string>
+    <string name="appsettings_report">回報問題</string>
+    <string name="appsettings_report_note">先查看回報，然後在 GitHub 上分享或發布</string>
+    <string name="appsettings_reset_key">重設我的金鑰</string>
+    <string name="appsettings_reset_key_note">每台電視都將再次請求信任這支手機。</string>
+    <string name="appsettings_reset_key_title">重設這支手機上的金鑰？</string>
+    <string name="appsettings_reset_key_confirm">重設我的金鑰</string>
+    <string name="appsettings_delete_all">刪除所有內容</string>
+    <string name="appsettings_delete_all_note">從這支手機刪除每台電視的記錄、日誌、還原點、應用的診斷日誌以及金鑰。電視本身不會變更，之後你將無法從這支手機復原。</string>
+    <string name="appsettings_delete_all_title">刪除這支手機上的所有內容？</string>
+    <string name="appsettings_delete_all_confirm">刪除所有內容</string>
+    <string name="appsettings_delete_all_busy">設定仍在 {tv} 上執行。請等待它完成，或先停止它。</string>
+
+
+    <!-- 停止與復原先詢問（確認項）：一個問題、一句平靜的話、一個動詞和一條回头路 -->
+    <string name="confirm_stop_title">現在停止？</string>
+    <string name="confirm_stop_body">我們在此停止，並還原我們到目前為止所變更的內容。你的電視維持安全。</string>
+    <string name="confirm_stop_button">停止並復原</string>
+    <string name="confirm_keep_going">繼續</string>
+    <string name="confirm_stop_here_title">在此停止？</string>
+    <string name="confirm_stop_here_body">我們保留已完成的部分，不再變更其他內容。你的電視維持安全。</string>
+    <string name="confirm_stop_here_button">在此停止</string>
+    <string name="confirm_undo_title">復原電視上的變更？</string>
+    <string name="confirm_undo_body">我們還原此次變更所做的全部內容，讓電視回到之前的狀態。不會刪除任何內容。</string>
+    <string name="confirm_undo_button">復原變更</string>
+
+    <!-- 0.3.2 B1：管理上一個未列出的電視 -->
+    <string name="manage_help_add_tv_banner">我們此前未見過這台確切的電視，因此對它格外謹慎。你的一份簡短回報能幫助我們把它加入。</string>
+    <string name="manage_help_add_tv">協助加入這台電視</string>
+    <!-- 0.4.7（must 4）：此前已發出的回報（SentReports） -->
+    <string name="manage_report_sent_banner">你在 {date} 發出了這台電視的回報。有消息時我們會在你的問題單中留言。</string>
+    <string name="manage_send_again">再次發送</string>
+    <string name="manage_wizard_home_title">設定精靈可以接管主畫面按鈕</string>
+    <string name="manage_wizard_home_body">重新開啟電視自带的主畫面，讓電視照常啟動。</string>
+    <string name="manage_wizard_home_button">重新開啟它</string>
+    <string name="manage_wizard_home_working">正在重新開啟電視自带的主畫面…</string>
+
+    <!-- 0.3.2 B1 和 B2：回報預覽 -->
+    <string name="report_tv_title">協助加入這台電視</string>
+    <string name="report_tv_body">這份回報說明這台電視是什麼、隨機附帶了哪些應用程式，以便我們為它建立清單。你自己安裝的應用程式只被計數，絕不會被命名。</string>
+    <string name="report_problem_title">回報問題</string>
+    <!-- 0.4.8：「告訴我們它有效」，確認時的預覽（ReportKind.CONFIRM） -->
+    <string name="report_confirm_title">告訴我們它有效</string>
+    <string name="report_confirm_body">這表明新的主畫面在這台電視上維持有效，包含電視的型號和應用統計到的內容。僅此而已：沒有名稱、沒有位址。</string>
+    <string name="report_confirm_unavailable">這台電視上尚未統計到任何重開。請在應用連線時重開它一次，然後重試。</string>
+    <string name="report_confirm_label">發送到 GitHub 的內容</string>
+    <string name="report_problem_body">這份回報以純文字包含我們執行的步驟和一段簡短的電視摘要。位址、序號、金鑰和程式碼會先被移除。這些步驟可能會提到我們已關閉或曾嘗試關閉的應用程式。</string>
+    <string name="report_public">如果你發布到 GitHub，這是公開的。應用本身不發送任何內容：由你決定它去哪裡。</string>
+    <string name="report_preview_label">回報</string>
+    <string name="report_paste_hint">我們複製回報，然後開啟 GitHub 上的表單。請把它貼上到要求填寫的欄位中。</string>
+    <string name="report_copy_open">複製並開啟 GitHub</string>
+    <!-- 0.3.3 D1：回報可放入連結中，因此表單開啟時已預先填入 -->
+    <string name="report_open">開啟 GitHub</string>
+    <string name="report_in_link_hint">GitHub 上的表單開啟時已包含這份回報。你可以再補充幾句話，然後發布。我們也會複製回報，以防表單開啟時未包含它。</string>
+    <!-- 0.4.6：問題回報對連結來說過長，因此表單取得其最新的日誌行 -->
+    <string name="report_in_link_short_hint">GitHub 上的表單開啟時已包含這份回報，但為容納得下只帶有最新的幾行日誌。你可以再補充幾句話，然後發布。我們也會複製整份回報，以防我們需要其餘部分。</string>
+    <string name="report_too_long">這份回報過長，無法單獨放入表單，所以我們為你複製了它。在 GitHub 上長按回報欄位，選擇貼上，然後發布。</string>
+    <string name="report_share">分享</string>
+    <string name="report_loading">正在產生回報</string>
+    <string name="report_unavailable">我們需要先讀取這台電視一次才能產生它的回報。請設定它或連線到它，然後重試。</string>
+    <!-- 0.4.7（must 4）：此前已發出電視回報；貼上一次的後問題連結 -->
+    <string name="report_sent_line">你在 {date} 發出了這台電視的回報。有消息時我們會在你的問題單中留言。你可以再次發送。</string>
+    <string name="report_sent_issue">你的問題單：{issue}。開啟它以查看消息。</string>
+    <string name="report_issue_label">你的問題單連結（選填）</string>
+    <string name="report_issue_hint">貼上回報所發往的問題單連結，我們會在此記住它。</string>
+    <string name="report_issue_error">這不是指向本应用在 GitHub 上某個問題單的連結。</string>
+    <string name="report_issue_save">記住它</string>
+    <string name="report_issue_open">開啟問題單</string>
+</resources>

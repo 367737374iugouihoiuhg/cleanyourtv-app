@@ -199,6 +199,9 @@
     <string name="appsettings_large_text_note">Text size follows the size set in your phone\'s Settings.</string>
     <string name="appsettings_haptics">Haptics</string>
     <string name="appsettings_haptics_note">Small taps when something finishes or needs you.</string>
+    <string name="appsettings_language">Language</string>
+    <string name="appsettings_language_note">Choose the language the app shows. English, 简体中文 and 繁體中文 each keep their own name.</string>
+    <string name="appsettings_language_auto">Follow system</string>
     <string name="appsettings_about">About</string>
     <string name="appsettings_version">Version {version}</string>
     <string name="appsettings_launcher_pin_label">Bundled home screen app</string>

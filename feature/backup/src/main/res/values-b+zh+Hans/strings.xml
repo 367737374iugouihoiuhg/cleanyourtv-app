@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clean Your TV，:feature:backup。简体中文资源字符串。
+  界面：M6 还原点、撤销预览与确认、导出，以及恢复出厂设置之前。带参数的字符串使用 ICU MessageFormat 命名参数。
+-->
+<resources>
+
+    <!-- 通用按钮文字 -->
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">确定</string>
+    <string name="action_done">完成</string>
+
+    <!-- 凭据验证提示（D17），由“恢复全部内容”触发 -->
+    <string name="gate_title">确认是你本人</string>
+    <string name="gate_subtitle">在我们改动 {tv} 上的任何内容之前</string>
+    <string name="gate_negative">取消</string>
+    <string name="gate_failed">我们无法确认是你本人，因此未作任何改动。</string>
+
+    <!-- M6 还原点 -->
+    <string name="restore_title">还原点</string>
+    <string name="restore_current">保存于 {date}</string>
+    <string name="restore_none">还没有还原点。在第一次改动之前会保存一个。</string>
+    <string name="restore_read_failed">读取还原点时出现问题</string>
+    <string name="restore_row_undo">撤销全部内容</string>
+    <string name="restore_row_undo_sub">把电视恢复到 {date} 时的状态</string>
+    <string name="restore_row_save">保存副本</string>
+    <string name="restore_row_save_sub">将一个 zip 文件保存到你选择的位置。</string>
+    <string name="restore_row_factory">恢复出厂设置之前</string>
+    <string name="restore_row_factory_sub">重新打开设置向导，以便电视在重置后能正常启动。</string>
+
+    <!-- 撤销全部内容：预览（UX 4.13） -->
+    <string name="restore_preview_title">这会把电视恢复到 {date} 时的状态：</string>
+    <string name="restore_preview_things">{count, plural, one {重新开启 # 项} other {重新开启 # 项}}</string>
+    <string name="restore_preview_home">让电视自带的主屏幕（{name}）重新负责</string>
+    <string name="restore_preview_wizard">重新开启设置向导</string>
+    <!-- RFC-HELPER-1（测试版）：撤销全部内容会移除主页按钮助手 -->
+    <string name="restore_preview_helper">关闭主页按钮助手</string>
+    <string name="restore_preview_screensaver">把时钟屏保恢复为电视自带的</string>
+    <string name="restore_preview_keyboard">把键盘恢复为电视自带的</string>
+    <string name="restore_launcher_title">新主屏幕</string>
+    <string name="restore_launcher_keep">将其作为普通应用保留并继续安装</string>
+    <string name="restore_launcher_remove">从电视上移除它</string>
+    <string name="restore_launcher_remove_note">移除它也会一并移除卡片在电视上给出的回答模块。</string>
+    <string name="restore_preview_button">恢复全部内容</string>
+
+    <!-- 撤销全部内容：确认面板 -->
+    <string name="restore_confirm_title">要恢复全部内容吗？</string>
+    <string name="restore_confirm_body">广告和跟踪也会随之回来。你可以随时重新运行清理。</string>
+    <string name="restore_confirm_button">恢复全部内容</string>
+
+    <!-- 撤销全部内容：进度说明与结束 -->
+    <string name="restore_working_title">正在恢复全部内容</string>
+    <string name="restore_working_things">{total, plural, other {正在重新开启各项：{done} / #……}}</string>
+    <string name="restore_working_home">正在恢复电视自带的主屏幕……</string>
+    <string name="restore_working_wizard">正在重新开启设置向导……</string>
+    <string name="restore_done_title">已全部恢复</string>
+    <string name="restore_done_body">你的电视已恢复到 {date} 时的状态。还原点会被保留，以防你改变主意。</string>
+    <string name="restore_clean_again">重新运行安装设置</string>
+
+    <!-- 恢复出厂设置之前 -->
+    <string name="restore_factory_title">恢复出厂设置之前</string>
+    <string name="restore_factory_body">恢复出厂设置会让电视的设置向导回来，因此我们现在重新开启它，以便电视随后能正常启动。</string>
+    <string name="restore_factory_button">重新开启设置向导</string>
+    <string name="restore_factory_working">正在重新开启设置向导……</string>
+    <string name="restore_factory_done">设置向导已重新开启。你现在可以重置电视了。</string>
+
+    <!-- 保存副本（导出） -->
+    <string name="restore_export_saved">已保存还原点的副本。</string>
+    <string name="restore_export_failed">我们无法保存副本。请换一个位置试试。</string>
+
+</resources>

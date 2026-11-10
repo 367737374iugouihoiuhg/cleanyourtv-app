@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clean Your TV, :feature:connect。繁體中文（Hant，台／港用語）字串。
+  與英文來源檔的 <string name> 集合、數量、順序一一對應。帶參數的字串使用 ICU MessageFormat
+  命名參數（大括號），由應用的訊息助手（android.icu.text.MessageFormat）格式化；無 printf 佔位符。
+  計數透過 plural 選擇器處理。不翻譯產品名、品牌／型號、adb 指令、Wi-Fi、Android、Google TV。
+  介面：S1、S1b、S1c、S2a 到 S2d、S2x，「我看不到」面板，以及尋找和連線電視的停止卡片。
+-->
+<resources>
+
+    <!-- 共用按鈕文字 -->
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">確定</string>
+
+    <!-- S1 歡迎。overline 是產品名，與電視啟動器上的一致。 -->
+    <string name="welcome_overline" translatable="false">Clean Your TV</string>
+    <string name="welcome_title">讓你的電視煥然一新。</string>
+    <string name="welcome_body">關掉雜亂，保留你常用的應用程式，還你一個平靜的主畫面。只需五分鐘，一切都能還原。</string>
+    <string name="welcome_hero_cd">一個佈滿贊助內容列的電視主畫面，變成只在底部有四個應用程式的乾淨主畫面</string>
+    <string name="welcome_looking">正在你的 Wi-Fi 中尋找電視……</string>
+    <string name="welcome_found_one">已找到 {name}（{room}）</string>
+    <string name="welcome_found_one_noroom">已找到 {name}</string>
+    <string name="welcome_found_many">{count, plural, one {已找到 # 台電視} other {已找到 # 台電視}}</string>
+    <string name="welcome_none_yet">還沒有找到電視。別急，我們繼續找。</string>
+    <string name="welcome_start">開始</string>
+    <string name="welcome_returning">我之前設定過電視</string>
+
+    <!-- S1b 是哪台電視？ -->
+    <string name="picker_title">是哪台電視？</string>
+    <string name="picker_body">不確定？你選擇的電視稍後會在畫面上顯示一則訊息。</string>
+    <string name="picker_row">{name}，{room} · {platform}</string>
+    <string name="picker_row_noroom">{name} · {platform}</string>
+    <string name="picker_name_with_suffix">{name} …{suffix}</string>
+    <string name="picker_platform_android_tv">Android TV {version}</string>
+    <string name="picker_platform_google_tv">Google TV {version}</string>
+    <string name="picker_platform_fire_tv">Fire TV</string>
+    <string name="picker_footer">手機和電視必須連到同一個 Wi-Fi。</string>
+    <string name="picker_primary">使用 {name}</string>
+    <string name="picker_tertiary">輸入電視的位址</string>
+
+    <!-- S1c 輸入電視位址（面板）：文字見 ui/design（AddressEntry） -->
+
+    <!-- S2a 讓手機接入（步驟） -->
+    <string name="door_title">讓手機接入</string>
+    <string name="door_body">拿起電視遙控器。這一步大約要一分鐘，也是唯一稍顯麻煩的地方。</string>
+    <string name="door_step_cd">第 {current} 步，共 {total} 步</string>
+    <string name="door_next">下一步</string>
+    <string name="door_menu_names_vary">你電視上的選單名稱可能略有不同。</string>
+    <string name="door_same_wifi">手機和電視必須連到同一個 Wi-Fi。</string>
+    <string name="door_waiting">正在等待電視……</string>
+    <string name="door_connecting">正在連線……</string>
+    <string name="door_still_waiting">仍在等待。USB 偵錯開啟了嗎？有些電視還需要開啟網路偵錯。</string>
+    <string name="door_still_waiting_show_me">教我操作</string>
+    <string name="door_change_model">不是 {model}？更換型號</string>
+    <string name="door_change_model_generic">不是這台電視？更換型號</string>
+    <!-- Round 3：S1b 備選入口的文字，用於在某台已發現的裝置上點「開始」打開的接入流程 -->
+    <string name="door_not_this_tv">不是這台電視？輸入電視的位址</string>
+    <string name="door_brand_prompt">是哪個品牌？</string>
+    <string name="door_brand_xiaomi">小米</string>
+    <string name="door_brand_tcl">TCL</string>
+    <string name="door_brand_sony">索尼</string>
+    <string name="door_brand_hisense">海信</string>
+    <string name="door_brand_philips">飛利浦</string>
+    <string name="door_brand_google">Google</string>
+    <string name="door_brand_amazon">Amazon</string>
+    <string name="door_brand_other">其他</string>
+    <!-- 選擇 TCL 之後：中國大陸版 TCL 韌體與 TCL 的 Android TV 或 Google TV 需要不同的步驟。 -->
+    <string name="door_tcl_menus_prompt">電視顯示的是哪種選單？</string>
+    <string name="door_tcl_menus_global">英文或我的語言的選單</string>
+    <string name="door_tcl_menus_chinese">中文選單</string>
+    <!-- 0.3.6：電視的埠號已回應，但連線失敗；{kind} 是一個簡短代碼，例如 unreachable -->
+    <string name="door_connect_failed_title">電視已回應，但這支手機無法連線</string>
+    <string name="door_connect_failed_body">連線失敗（{kind}）。只要停留在這個畫面，我們就會不斷重試。</string>
+    <string name="door_connect_failed_hint">如果電腦上的 ADB 可以連線，但這個應用程式連不上電視，可能是手機上有東西擋住了：某個應用程式的網路限制（MIUI、三星）、VPN、私密 DNS 或行動數據。先暫時關掉它，再試一次。</string>
+    <!-- 0.4.8：電視拒絕了連線（refused）：它的偵錯埠號上沒有程式在監聽。{kind} 是簡元代碼 refused -->
+    <string name="door_connect_refused_title">電視上的偵錯已關閉</string>
+    <string name="door_connect_refused_body">電視拒絕了連線（{kind}），代表它的偵錯是關閉的。設定結束時我們會刻意把它關掉，所以對之前設定過的電視來說這是正常的。</string>
+    <string name="door_connect_refused_hint">要重新開啟：在電視上打開「設定」，再進入「裝置偏好設定」或「系統」，然後進入「開發人員選項」，開啟 USB 偵錯。只要停留在這個畫面，我們就會不斷重試。</string>
+    <string name="door_copy_error">複製錯誤資訊</string>
+    <string name="door_error_copied">已複製。請貼到你的問題回報裡。</string>
+    <!-- 0.4.6：在連線失敗下方；打開 GitHub 表單並預先填好手機這一側的資訊。所有回報按鈕的文字。 -->
+    <string name="connect_report">回報問題</string>
+    <string name="door_unknown_note">我們之前沒見過這台一模一樣的電視。步驟通常是一樣的。</string>
+
+    <!-- 依平台家族劃分的 S2a 步驟卡片（UX 2 表）。給譯者的提示：請與電視自身的選單名稱保持一致。 -->
+    <!-- Android TV 9 到 11 -->
+    <string name="family_atv_step1">在電視上打開「設定」（右上角的齒輪），再進入「裝置偏好設定」＞「關於」。在「版本號碼」上按確定七次，直到電視提示「你現在是開發人員」。</string>
+    <string name="family_atv_step2">返回上一層。打開「開發人員選項」，開啟 USB 偵錯。如果電視還顯示「網路偵錯」或「ADB 偵錯」，也一併開啟。</string>
+    <string name="family_atv_step3">讓電視停留在這個畫面。你的手機會自動連線。</string>
+    <string name="family_atv_extra_shield">在 Shield 上，關鍵是「網路偵錯」這一項。</string>
+    <!-- Google TV 12 到 14 -->
+    <string name="family_gtv_step1">在電視上打開「設定」，再進入「系統」＞「關於」。在「Android TV 系統版本」上按確定七次，直到電視提示「你現在是開發人員」。</string>
+    <string name="family_gtv_step2">返回上一層。打開「系統」＞「開發人員選項」，開啟 USB 偵錯，然後再開啟無線偵錯。</string>
+    <string name="family_gtv_step3">讓電視停留在這個畫面。你的手機會自動連線。</string>
+    <!-- Fire TV（Fire OS 7） -->
+    <string name="family_fire_step1">在電視上打開「設定」＞「我的 Fire TV」＞「關於」。連續選擇裝置名稱七次，直到電視提示「你現在是開發人員」。</string>
+    <string name="family_fire_step2">返回上一層。打開「開發人員選項」，開啟 ADB 偵錯。</string>
+    <string name="family_fire_step3">讓電視停留在這個畫面。你的手機會自動連線。</string>
+    <!-- 中國大陸版 TCL（Android 9） -->
+    <string name="family_tcl_step1">在電視上打開「設定」＞「關於」＞ 本機資訊，然後用遙控器依次按 上、下、左、右。</string>
+    <string name="family_tcl_step2">會出現一個帶有位址的小「ADB」視窗。保持它開著。</string>
+    <string name="family_tcl_step3">讓電視停留在這個畫面。你的手機會自動連線。</string>
+    <!-- 中國大陸以外的 TCL（選單為英文或使用者語言）：在 Android TV 步驟的基礎上，第 1、2 步再加這幾行 -->
+    <string name="family_tcl_extra_gtv_step1">在 Google TV 上：進入「系統」＞「關於」，然後在「Android TV 系統版本」上按確定七次。</string>
+    <string name="family_tcl_extra_gtv">在 Google TV 上，還要開啟無線偵錯。</string>
+    <!-- 未知品牌：通用的 Android TV 路徑 -->
+    <string name="family_unknown_step1">在電視上打開「設定」（右上角的齒輪），再進入「裝置偏好設定」＞「關於」。在「版本號碼」上按確定七次，直到電視提示「你現在是開發人員」。</string>
+    <string name="family_unknown_step2">返回上一層。打開「開發人員選項」，開啟 USB 偵錯。如果電視還顯示「網路偵錯」或「ADB 偵錯」，也一併開啟。</string>
+    <string name="family_unknown_step3">讓電視停留在這個畫面。你的手機會自動連線。</string>
+
+    <!-- S2a 設定值橫幅（UX 2 和 4.15） -->
+    <string name="banner_fire">在 Fire TV 上，我們可以關閉廣告和追蹤，但會保留它自己的主畫面。你依然能享受清理效果。</string>
+    <string name="banner_tcl">這台電視會保留自己的主畫面（TCL 不允許使用其他主畫面）。你依然能享受清理效果。</string>
+    <string name="banner_mibox_usb">偵錯開啟期間，這台裝置會關閉它的 USB 連接埠。USB 喇叭或隨身碟會停止運作，直到我們完成（結束時我們會再把偵錯關掉）。</string>
+
+    <!-- S2c 請看電視（允許） -->
+    <string name="allow_title">請看電視</string>
+    <string name="allow_body">電視正在詢問是否信任這支手機。勾選「一律允許」，然後選擇確定。</string>
+    <!-- allow_body 中以 text.primary 顯示的兩個部分；每一部分都必須在 allow_body 中原樣出現。 -->
+    <string name="allow_body_emphasis_always">「一律允許」</string>
+    <string name="allow_body_emphasis_ok">確定。</string>
+    <string name="allow_code_label">電視上程式碼的結尾是</string>
+    <string name="allow_code_caption">那就是這支手機。</string>
+    <string name="allow_waiting">正在等待你在電視上點按……</string>
+    <string name="allow_still_waiting">仍在等待你在電視上按確定。</string>
+    <string name="allow_trusted">已信任</string>
+    <string name="allow_dont_see">我在電視上看不到它</string>
+    <string name="allow_art_cd">電視上的「允許 USB 偵錯」對話方塊。指紋結尾為 {tail}。</string>
+
+    <!-- S2c 面板：我在電視上看不到它（UX 4.4） -->
+    <string name="notseen_title">我在電視上看不到它</string>
+    <string name="notseen_hidden">這個對話方塊可能被另一個畫面擋住了。請按遙控器上的首頁鍵，然後按一次返回。如果還是沒有，我們會再問一次電視。</string>
+    <string name="notseen_cancelled">如果有人點了取消：請在電視上先把 USB 偵錯關掉再打開，然後點「再問一次電視」。</string>
+    <string name="notseen_greyed">如果電視上的「一律允許」是灰的，只按確定也可以；下次我們會再問一次。</string>
+    <string name="notseen_ask_again">再問一次電視</string>
+    <string name="notseen_asking">正在再問一次電視……</string>
+    <string name="notseen_restart">電視不接受這支手機。在某些型號上，如果電視還沒啟動完就開啟了偵錯，就會這樣。請重新啟動電視，再次開啟偵錯，然後回來。</string>
+    <string name="notseen_restarted">我已經重新啟動了</string>
+
+    <!-- S2d 已連線，以及身分確認「這是你的電視嗎？」（D38） -->
+    <string name="connected_title">已連線到 {tv}</string>
+    <string name="connected_cd">已連線</string>
+    <string name="identity_question">這是你的電視嗎？</string>
+    <string name="identity_detail">{name}，序號結尾 {serial}</string>
+    <string name="identity_body">請確認畫面與你電視現在顯示的內容一致。</string>
+    <string name="identity_screenshot_cd">你的電視現在顯示的內容</string>
+    <string name="identity_yes">是的，這是我的</string>
+    <string name="identity_no">不是</string>
+
+    <!-- S2x 需要配對（D9）。三條指令是程式碼，不翻譯。 -->
+    <string name="pairing_title">這台電視需要配對碼</string>
+    <string name="pairing_body">這個版本還無法輸入配對碼，下一個版本可以。如果你有電腦，請用 adb 配對一次並執行 adb tcpip 5555，然後回來；剩下的交給手機。</string>
+    <string name="pairing_show_steps">教我電腦上的步驟</string>
+    <string name="pairing_steps_title">在電腦上配對一次</string>
+    <string name="pairing_steps_intro">在電視上打開「開發人員選項」＞「無線偵錯」＞「使用配對碼配對裝置」。然後在電腦上依次執行這三條指令。</string>
+    <string name="pairing_steps_cmd_pair" translatable="false">adb pair ADDRESS:PAIR_PORT</string>
+    <string name="pairing_steps_cmd_connect" translatable="false">adb connect ADDRESS:CONNECT_PORT</string>
+    <string name="pairing_steps_cmd_tcpip" translatable="false">adb -s ADDRESS:CONNECT_PORT tcpip 5555</string>
+    <string name="pairing_steps_note">請使用電視顯示的位址、埠號和六位配對碼。最後一條指令執行完，就回到這個應用程式。電視重新啟動後，用電視當時顯示的埠號再次執行最後兩條指令即可；無需再次配對。</string>
+
+    <!-- 停止：未找到電視（UX 4.1，不顯示 Wi-Fi 名稱，D19） -->
+    <string name="stop_tv_not_found_title">還沒找到電視</string>
+    <string name="stop_tv_not_found_body">請確認電視已開機，並和這支手機連在同一個 Wi-Fi 上。電視喚醒後可能需要一分鐘才會出現。</string>
+    <string name="stop_tv_not_found_primary">繼續尋找</string>
+    <string name="stop_tv_not_found_secondary">輸入電視的位址</string>
+    <string name="stop_tv_not_found_tertiary">說明</string>
+    <string name="stop_tv_not_found_help_title">電視可能不出現的原因</string>
+    <string name="stop_tv_not_found_help_isolation">訪客 Wi-Fi，或讓裝置相互隔離的分享器。請在分享器裡找到「AP 隔離」或「用戶端隔離」並把它關掉。</string>
+    <string name="stop_tv_not_found_help_ethernet">電視使用乙太網路，而手機使用 Wi-Fi。在大多數分享器上這沒問題，但有些會把兩者隔離。直接輸入電視的位址可以繞過。</string>
+    <string name="stop_tv_not_found_help_mesh">帶有獨立訪客網路的 Mesh 網路。請把手機連到主網路。</string>
+
+    <!-- 停止：網路不對（UX 4.2，配合 D19 文字） -->
+    <string name="stop_wrong_network_title">手機和電視連的不是同一個網路</string>
+    <string name="stop_wrong_network_body">上次發現電視時它在另一個網路上。請連到電視所在的 Wi-Fi，我們繼續。</string>
+    <string name="stop_wrong_network_primary">打開 Wi-Fi 設定</string>
+    <string name="stop_wrong_network_secondary">我連的沒問題，再看一次</string>
+    <string name="stop_wrong_network_off_title">這支手機沒連 Wi-Fi</string>
+    <string name="stop_wrong_network_off_body">Wi-Fi 已關閉。只能透過同一個 Wi-Fi 連到電視。</string>
+
+    <!-- 停止：身分已改變（D37） -->
+    <string name="stop_identity_changed_title">這個位址上回應的是另一台電視</string>
+    <string name="stop_identity_changed_body">這個位址上的電視不是我們設定為 {name} 的那台。它的位址可能變了，或被另一台電視佔用。我們在改動任何東西之前就停止了。</string>
+    <string name="stop_identity_changed_primary">再找一次</string>
+    <string name="stop_identity_changed_secondary">返回</string>
+
+    <!-- 停止：缺少 shell v2（F1） -->
+    <string name="stop_tv_not_supported_title">這台電視還不能用手機設定</string>
+    <string name="stop_tv_not_supported_body">這台電視的偵錯連線太基本，手機無法安全地做改動，所以我們在動任何東西之前就停止了。電視上沒有任何改動。</string>
+    <string name="stop_tv_not_supported_primary">返回</string>
+
+</resources>

@@ -1,6 +1,7 @@
 package tv.cleanyour.app
 
 import android.app.Application
+import android.content.Context
 import java.io.File
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.combine
@@ -14,6 +15,12 @@ import tv.cleanyour.core.flows.planOrNull
 class CytApplication : Application() {
     lateinit var graph: AppGraph
         private set
+
+    // The chosen app language applies to the Application context too, so strings read here
+    // (the notification channel name) carry it from the very first moment.
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(LocalePrefs.wrap(base))
+    }
 
     override fun onCreate() {
         super.onCreate()

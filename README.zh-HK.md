@@ -13,8 +13,8 @@
 <h3 align="center">一款由社群打造的手機應用，服務於 <a href="https://github.com/Gathin23/cleanyourtv">Clean Your TV</a>。<br>人人都能清理自己的電視：無需電腦，無需程式代理，無需線材。</h3>
 
 <p align="center">
-  <a href="README.md"><b>English</b></a> ·
-  <a href="README.zh-CN.md"><b>简体中文</b></a> ·
+  <a href="README.en.md"><b>English</b></a> ·
+  <a href="README.md"><b>简体中文</b></a> ·
   <b>繁體中文</b>
 </p>
 

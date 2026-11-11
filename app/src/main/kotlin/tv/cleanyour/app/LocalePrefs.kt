@@ -61,8 +61,6 @@ object LocalePrefs {
         val locale = localeFor(get(base)) ?: return base
         val config = Configuration(base.resources.configuration)
         config.setLocales(LocaleList(locale))
-        @Suppress("DEPRECATION")
-        config.userLocale = locale
         return base.createConfigurationContext(config)
     }
 }

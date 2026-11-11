@@ -6,17 +6,25 @@
   <a href="https://github.com/udhaykumarbala/cleanyourtv-app/releases/latest"><img src="https://img.shields.io/github/v/release/udhaykumarbala/cleanyourtv-app?style=flat&color=E8A84C&labelColor=15181e&label=download%20APK" alt="Download the latest APK"></a>
   <img src="https://img.shields.io/badge/TVs-173%20lists%20%C2%B7%2047%20brands-E8A84C?style=flat&labelColor=15181e" alt="173 TV lists from 47 brands">
   <img src="https://img.shields.io/badge/phone-Android%209%2B-E8A84C?style=flat&labelColor=15181e" alt="Android 9 or newer">
+  <img src="https://img.shields.io/badge/languages-English%20%C2%B7%20%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%20%C2%B7%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87-E8A84C?style=flat&labelColor=15181e" alt="English, Simplified Chinese and Traditional Chinese">
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-MIT-E8A84C?style=flat&labelColor=15181e" alt="MIT licence"></a>
 </p>
 
 <h3 align="center">A community-built phone app for <a href="https://github.com/Gathin23/cleanyourtv">Clean Your TV</a>.<br>Anyone can clean up their TV: no laptop, no coding agent, no cables.</h3>
 
 <p align="center">
+  <b>English</b> ·
+  <a href="README.zh-CN.md"><b>简体中文</b></a> ·
+  <a href="README.zh-HK.md"><b>繁體中文</b></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/udhaykumarbala/cleanyourtv-app/releases/latest"><b>Download</b></a> ·
   <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/udhaykumarbala/cleanyourtv-app"><b>Get it with Obtainium</b></a> ·
   <a href="#how-it-works"><b>How it works</b></a> ·
   <a href="#safe-by-design"><b>Is it safe?</b></a> ·
-  <a href="#supported-tvs"><b>Supported TVs</b></a>
+  <a href="#supported-tvs"><b>Supported TVs</b></a> ·
+  <a href="#in-app-languages"><b>Languages</b></a>
   <br><sub>Obtainium follows this app's GitHub releases and updates it by itself.</sub>
 </p>
 
@@ -119,6 +127,15 @@ the app. Add yours there by following its
 [contributing guide](https://github.com/Gathin23/cleanyourtv/blob/main/CONTRIBUTING.md), and the app
 picks it up in its next release. See also [CONTRIBUTING.md](CONTRIBUTING.md#propose-a-tv-profile).
 
+## In-app languages
+
+The app speaks **English, 简体中文 and 繁體中文**. By default it follows your phone's system
+language: a Simplified-Chinese phone opens in Simplified Chinese, a Traditional-Chinese phone in
+Traditional Chinese. You can also pick a language by hand in **App settings → Language**
+(Follow the system / English / 简体中文 / 繁體中文). The change takes effect straight away, is
+remembered across restarts, and is independent of the phone's own system language — so you can run
+the app in Chinese even on an English phone, or keep it in English on a Chinese phone.
+
 ## Built on Clean Your TV
 
 - The home screen is the [Clean Your TV launcher](https://github.com/Gathin23/cleanyourtv/tree/main/launcher)
@@ -180,6 +197,9 @@ cd cleanyourtv-app
 ```
 
 A Kotlin and Jetpack Compose app that speaks ADB to the TV itself, with no computer in between.
+The interface strings live in each module's `res/values/strings.xml`, with Simplified Chinese in
+`values-b+zh+Hans` and Traditional Chinese in `values-b+zh+Hant`; the in-app language switch and
+its "follow the system" default are wired up in `app/src/main/kotlin/tv/cleanyour/app/LocalePrefs.kt`.
 [CONTRIBUTING.md](CONTRIBUTING.md) covers tests, screenshot goldens, the module rules and how
 releases are built and signed. How the app was designed and reviewed is in
 [docs/history](docs/history/README.md), and what changed in each version in [CHANGELOG.md](CHANGELOG.md).

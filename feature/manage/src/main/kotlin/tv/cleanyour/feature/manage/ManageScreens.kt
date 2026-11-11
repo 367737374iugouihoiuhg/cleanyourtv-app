@@ -559,7 +559,7 @@ fun AppSettingsScreen(state: AppSettingsState, onIntent: (AppSettingsIntent) -> 
     if (connection) CytBottomSheet({ connection = false }) { DetailsContent(details, onDetails) }
     if (languageOpen) CytBottomSheet({ languageOpen = false }) {
         SheetHeader(stringResource(R.string.appsettings_language))
-        ChoiceList(langOptions, language) { o -> languageOpen = false; onLanguageChange(o.key) }
+        ChoiceList(langOptions, language, onSelect = { o -> languageOpen = false; onLanguageChange(o.key) })
     }
     state.confirm?.let { what ->
         CytBottomSheet({ onIntent(AppSettingsIntent.CancelConfirm) }) { ConfirmContent(what, state.working, onIntent) }

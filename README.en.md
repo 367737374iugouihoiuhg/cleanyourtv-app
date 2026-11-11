@@ -20,7 +20,7 @@
 
 <p align="center">
   <a href="https://github.com/367737374iugouihoiuhg/cleanyourtv-app/releases/tag/v0.4.8-zh"><b>Download</b></a> ·
-  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/udhaykumarbala/cleanyourtv-app"><b>Get it with Obtainium</b></a> ·
+  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/367737374iugouihoiuhg/cleanyourtv-app"><b>Get it with Obtainium</b></a> ·
   <a href="#how-it-works"><b>How it works</b></a> ·
   <a href="#safe-by-design"><b>Is it safe?</b></a> ·
   <a href="#supported-tvs"><b>Supported TVs</b></a> ·

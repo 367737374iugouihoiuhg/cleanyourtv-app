@@ -20,7 +20,7 @@
 
 <p align="center">
   <a href="https://github.com/367737374iugouihoiuhg/cleanyourtv-app/releases/tag/v0.4.8-zh"><b>下載</b></a> ·
-  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/udhaykumarbala/cleanyourtv-app"><b>用 Obtainium 取得</b></a> ·
+  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/367737374iugouihoiuhg/cleanyourtv-app"><b>用 Obtainium 取得</b></a> ·
   <a href="#工作原理"><b>工作原理</b></a> ·
   <a href="#安全設計"><b>安全嗎？</b></a> ·
   <a href="#支援的電視"><b>支援的電視</b></a> ·
